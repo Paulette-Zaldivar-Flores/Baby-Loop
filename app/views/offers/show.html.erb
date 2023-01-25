@@ -7,13 +7,19 @@
 
 
 
-<%= form_with model: Request.new, authenticity_token: true do |f| %>
-  <%= f.text_field :date,
-    data: {
-      controller: "flatpickr",
-      flatpickr_date_format: "D j, Y",
-      flatpickr_min_date: Time.zone.now,
-      flatpickr_inline: true,
-      flatpickr_mode: "range"
-    } %>
+<%# <%= form_with model: Request.new, authenticity_token: true do |f| %>
+  <%# <%= f.text_field :date, %>
+    <%# data: { %>
+      <%# controller: "flatpickr", %>
+      <%# flatpickr_date_format: "D j, Y", %>
+      <%# flatpickr_min_date: Time.zone.now, %>
+      <%# flatpickr_inline: true, %>
+      <%# flatpickr_mode: "range" %>
+    <%# } %>
+<%# <% end %>
+
+<%= simple_form_for [@offer, @request] do |f| %>
+  <%= f.input :start_date, html5: true %>
+  <%= f.input :end_date, html5: true %>
+  <%= f.button :submit %>
 <% end %>
