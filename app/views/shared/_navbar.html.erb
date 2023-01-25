@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark navbar-babyloop">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "logo.png" %>
@@ -26,6 +26,15 @@
             </div>
           </li>
         <% else %>
+        <li class="nav-item">
+            <%= link_to "List", "#", class: "nav-link" %>
+          </li>
+        <li class="nav-item">
+            <%= link_to "Rent", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", "#", class: "nav-link" %>
+          </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>

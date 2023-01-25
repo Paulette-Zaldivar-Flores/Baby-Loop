@@ -1,0 +1,58 @@
+
+
+.banner img{
+  height: 600px;
+  width: 100%;
+
+}
+
+
+
+
+.banner h1, .banner p {
+  color: #6667AA;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  font-family: 'Jost', sans-serif;
+}
+
+.banner p{
+  color: black;
+  position: absolute;
+  top: 60%;
+  left: 50px;
+}
+
+
+  .banner-button, .a {
+  padding: 15px 20px;
+  background: #6667AA;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size:16px;
+  position: absolute;
+  top: 80%;
+  left: 50px;
+    }
+
+  .banner-button:hover{
+    background:#7172ad;
+  }
+
+
+
+
+
+
+
+
+// .banner {
+//   background-size: cover;
+//   background-position: center;
+//   padding: 200px 0;
+// }
+
+// .banner h1, .banner p {
+// color: white;

@@ -10,3 +10,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+
+}
