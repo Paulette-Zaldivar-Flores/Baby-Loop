@@ -1,0 +1,19 @@
+<div class="container pt-4">
+  <h2><%= @offer.item_name %></h2>
+  <p><%= @offer.category %></p>
+  <p><%= @offer.description %></p>
+  <p>$<%= @offer.rate %></p>
+</div>
+
+
+
+<%= form_with model: Request.new, authenticity_token: true do |f| %>
+  <%= f.text_field :date,
+    data: {
+      controller: "flatpickr",
+      flatpickr_date_format: "D j, Y",
+      flatpickr_min_date: Time.zone.now,
+      flatpickr_inline: true,
+      flatpickr_mode: "range"
+    } %>
+<% end %>
