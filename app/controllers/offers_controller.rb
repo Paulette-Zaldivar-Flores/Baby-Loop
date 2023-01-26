@@ -3,6 +3,7 @@ class OffersController < ApplicationController
 
   def show
     authorize @offer
+    @request = Request.new
   end
 
   # TO BE MODIFIED
@@ -16,7 +17,7 @@ class OffersController < ApplicationController
   # end
 
   # def create
-  #   @offer = Offer,new(offer_params)
+  #   @offer = Offer.new(offer_params)
   #   @offer.user = current_user
   #   authorize @offer
 

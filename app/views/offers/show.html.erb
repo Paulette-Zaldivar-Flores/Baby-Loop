@@ -5,25 +5,36 @@
   <p>$<%= @offer.rate %></p>
 </div>
 
-
-<%# <div> %>
-<%# <%= if policy(@offer).edit? %> %>
-  <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %> %>
-<%# <% end %> %>
-
-<%# <%= if policy(@offer).destroy? %> %>
-  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> %>
-<%# <% end %> %>
-<%# </div> %>
-
 <div class="container">
-  <%= form_with model: Request.new, authenticity_token: true do |f| %>
-    <%= f.text_field :date,
-      data: {
-        controller: "flatpickr",
-        flatpickr_date_format: "Y-m-d",
-        flatpickr_min_date: Time.zone.now,
-        flatpickr_inline: true
-      } %>
+  <%= simple_form_for [@offer, @request] do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.button :submit %>
   <% end %>
 </div>
+
+<%# These are links that will only be available to those who created the offer, uncomment if you want these %>
+
+<%# <div> %>
+<%# <%= if policy(@offer).edit? %>
+  <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %>
+<%# <% end %>
+
+<%# <%= if policy(@offer).destroy? %>
+  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%# <% end %>
+<%# </div> %>
+
+
+<%# WILL LATER REPLACE SIMPLE FORM ABOVE %>
+
+<%# <%= form_with model: Request.new, authenticity_token: true do |f| %>
+  <%# <%= f.text_field :date, %>
+    <%# data: { %>
+      <%# controller: "flatpickr", %>
+      <%# flatpickr_date_format: "D j, Y", %>
+      <%# flatpickr_min_date: Time.zone.now, %>
+      <%# flatpickr_inline: true, %>
+      <%# flatpickr_mode: "range" %>
+    <%# } %>
+<%# <% end %>
