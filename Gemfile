@@ -59,6 +59,7 @@ group :development, :test do
 
 # MAnually added gems
 gem "devise"
+gem "pundit"
 end
 
 group :development do

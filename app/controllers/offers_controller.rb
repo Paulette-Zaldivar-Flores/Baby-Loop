@@ -3,7 +3,10 @@ class OffersController < ApplicationController
 
   def show
     authorize @offer
+<<<<<<< HEAD
     @request = Request.new
+=======
+>>>>>>> master
   end
 
   # TO BE MODIFIED
@@ -17,7 +20,11 @@ class OffersController < ApplicationController
   # end
 
   # def create
+<<<<<<< HEAD
   #   @offer = Offer.new(offer_params)
+=======
+  #   @offer = Offer,new(offer_params)
+>>>>>>> master
   #   @offer.user = current_user
   #   authorize @offer
 
