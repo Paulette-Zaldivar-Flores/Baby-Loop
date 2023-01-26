@@ -11,7 +11,7 @@
 <%# <% end %>
 
 <%# <%= if policy(@offer).destroy? %>
-  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> %>
+  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <%# <% end %>
 <%# </div> %>
 
@@ -27,8 +27,10 @@
     <%# } %>
 <%# <% end %>
 
-<%= simple_form_for [@offer, @request] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <%= simple_form_for [@offer, @request] do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
