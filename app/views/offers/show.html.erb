@@ -19,7 +19,7 @@
 <%# <% end %>
 
 <%= simple_form_for [@offer, @request] do |f| %>
-  <%= f.input :start_date, html5: true %>
-  <%= f.input :end_date, html5: true %>
+  <%= f.input :start_date, as: :date, html5: true %>
+  <%= f.input :end_date, as: :date, html5: true %>
   <%= f.button :submit %>
 <% end %>
