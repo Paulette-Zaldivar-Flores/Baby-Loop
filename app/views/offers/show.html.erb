@@ -5,6 +5,16 @@
   <p>$<%= @offer.rate %></p>
 </div>
 
+<div class="container">
+  <%= simple_form_for [@offer, @request] do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
+<%# These are links that will only be available to those who created the offer, uncomment if you want these %>
+
 <%# <div> %>
 <%# <%= if policy(@offer).edit? %>
   <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %>
@@ -16,6 +26,8 @@
 <%# </div> %>
 
 
+<%# WILL LATER REPLACE SIMPLE FORM ABOVE %>
+
 <%# <%= form_with model: Request.new, authenticity_token: true do |f| %>
   <%# <%= f.text_field :date, %>
     <%# data: { %>
@@ -26,11 +38,3 @@
       <%# flatpickr_mode: "range" %>
     <%# } %>
 <%# <% end %>
-
-<div class="container">
-  <%= simple_form_for [@offer, @request] do |f| %>
-    <%= f.input :start_date, as: :date, html5: true %>
-    <%= f.input :end_date, as: :date, html5: true %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
