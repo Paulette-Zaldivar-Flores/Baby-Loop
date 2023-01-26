@@ -1,8 +1,8 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: %i[create] #update destroy
 
-  def index
-  end
+  # def index
+  # end
 
   def new
     @request = Request.new
@@ -25,9 +25,9 @@ class RequestsController < ApplicationController
     end
   end
 
-  def update
-    authorize @request
-  end
+  # def update
+  #   authorize @request
+  # end
 
   private
 
