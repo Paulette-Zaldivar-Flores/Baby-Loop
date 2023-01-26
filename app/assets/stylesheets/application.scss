@@ -20,14 +20,22 @@
 
 body{
   background:#ffffff;
+  overflow-x: hidden;
 
 }
 
 a{
   text-decoration: none;
+  color: #ffffff;
 }
 
-a:hover{
-  color: white;
 
+
+a:hover{
+  color: #ffffff;
+
+}
+
+li{
+  list-style-type: none;
 }
