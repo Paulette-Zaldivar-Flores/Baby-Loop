@@ -1,8 +1,12 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: %i[create] #update destroy
 
+  # def index
+  # end
+
   def new
     @request = Request.new
+    authorize @request
   end
 
   def create
@@ -12,12 +16,18 @@ class RequestsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @request.offer = @offer
     @request.status = 0
+    authorize @request
+
     if @request.save
       redirect_to offers_path, message: 'Request submitted.'
     else
       render 'offers/show'
     end
   end
+
+  # def update
+  #   authorize @request
+  # end
 
   private
 
