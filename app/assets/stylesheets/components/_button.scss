@@ -5,8 +5,7 @@
   color: white;
   font-weight: bold;
   font-size:16px;
-
-    }
+}
 
   .button:hover{
     background:#7172ad;
@@ -19,6 +18,43 @@
 
   .view-more-button{
     margin: 30px;
+  }
 
+  .button-accept{
+    padding: 15px 20px;
+  background: #6eb57e;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size:16px;
+  }
 
+  .button-accept:hover{
+    background: #59a96b;
+  }
+
+  .button-decline{
+  padding: 15px 20px;
+  background: #c34d46;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size:16px;
+  }
+
+  .button-decline:hover{
+    background: #c7423b;
+  }
+
+  .button-edit{
+  padding: 15px 20px;
+  background: #49b5c5;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size:16px;
+  }
+
+  .button-edit:hover{
+  background: #31a7b9;
   }
