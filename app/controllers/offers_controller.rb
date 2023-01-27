@@ -11,22 +11,22 @@ class OffersController < ApplicationController
   #   @offers = policy_scope(Offer).all
   # end
 
-  # def new
-  #   @offer = Offer.new
-  #   authorize @restaurant
-  # end
+  def new
+    @offer = Offer.new
+    authorize @offer
+  end
 
-  # def create
-  #   @offer = Offer.new(offer_params)
-  #   @offer.user = current_user
-  #   authorize @offer
+  def create
+    @offer = Offer.new(offer_params)
+    @offer.user = current_user
+    authorize @offer
 
-  #   if @offer.save
-  #     redirect_to @offer, notice: "Offer was successfully created."
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
+    if @offer.save
+      redirect_to @offer, notice: "Offer was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
   ######## WE CURRENTLY DON'T HAVE AN EDIT OR DELETE OPTION FOR OUR OFFERS
   # def edit
@@ -54,7 +54,7 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
   end
 
-  # def offer_params
-  #   params.require(:offer).permit(:item_name, :category, :description, :rate)
-  # end
+  def offer_params
+    params.require(:offer).permit(:item_name, :category, :description, :rate)
+  end
 end
