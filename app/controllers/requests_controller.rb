@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  before_action :set_request, only: %i[create] #update destroy
+  # before_action :set_request, only: %i[] #update destroy
 
   # def index
   # end
@@ -11,7 +11,7 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(request_params)
-    @user = @current_user
+    @user = current_user
     @request.user = @user
     @offer = Offer.find(params[:offer_id])
     @request.offer = @offer
@@ -19,7 +19,8 @@ class RequestsController < ApplicationController
     authorize @request
 
     if @request.save
-      redirect_to offers_path, message: 'Request submitted.'
+      redirect_to offer_path(@offer), notice: 'Request submitted.'
+      # to be changed to root_path, notice: 'Request submitted.'
     else
       render 'offers/show'
     end
@@ -31,9 +32,9 @@ class RequestsController < ApplicationController
 
   private
 
-  def set_request
-    @request = Request.find(params[:id])
-  end
+  # def set_request
+  #   @request = Request.find(params[:id])
+  # end
 
   def request_params
     params.require(:request).permit(:start_date, :end_date, :status)
