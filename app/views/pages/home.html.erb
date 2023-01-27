@@ -1,2 +1,141 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <%= image_tag "banner_babyloop.png", class: "banner" %>
+  <h1 class = "banner-h1">Rent With Us</h1>
+    <p>Baby Gear and More</p>
+  <a href="#" class = "banner-button">Rent Now</a>
+</div>
+
+<div class = "our-products">
+  <h1>Our Products</h1>
+    <p>We deliver boxes of fantastic, clothes, furniture items and toys hand picked by you!</p>
+</div>
+
+<div class = "rent-now-midsection">
+  <h1 class = "mid-section-title">RENT NOW...</h1>
+</div>
+
+<div class="row centered">
+    <div class="col">
+  <%= image_tag "crib.jpg", class: "main-page-product" %></div>
+    <div class="col mid-button"><a href="#" class = "button">Rent Now</a></div>
+</div>
+
+<div class = "our-products">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card background">
+      <%= image_tag "car.jpg", class: "card-image-top" %>
+      <div class="card-body">
+        <h5 class="card-title product">Red Car</h5>
+        <p class="card-text product-text">
+         8.50 USD
+        </p>
+    </div>
+  </div>
+  </div>
+   <div class="col">
+    <div class="card background">
+      <%= image_tag "duck.jpg", class: "card-image-top" %>
+      <div class="card-body">
+        <h5 class="card-title product">Wind Up Duck</h5>
+        <p class="card-text product-text">
+          10.50 USD
+        </p>
+    </div>
+  </div>
+  </div>
+
+  <div class="col">
+    <div class="card background">
+      <%= image_tag "horse.jpg", class: "card-image-top" %>
+      <div class="card-body">
+        <h5 class="card-title product">Wooden Horse</h5>
+        <p class="card-text product-text">
+         30.95 USD
+        </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<h1 class = "baby-section-title">BABY LOOP...</h1>
+  <div class="row centered row-cols-md-3">
+    <div class = "col">
+      <ul >
+        <li class = "categories">Baby & Toddler Toys</li>
+        <li class = "categories">Building Toys</li>
+        <li class = "categories">Arts & Crafts Toy</li>
+        <li class = "categories">Nursery Furniture</li>
+        <li class = "categories">Clothes</li>
+        <li class = "categories">Shoes</li>
+      </ul>
+  <a href="#" class = "button view-more-button">View More</a>
+  </div>
+<div class="col">
+  <%= image_tag "duck.jpg", class: "categories-product" %>
+  </div>
+</div>
+
+
+<h1 class = "text-center mb-3 mt-3 offer"> My Offers</h1>
+<div class = "my-offers">
+<div class = "col d-flex justify-content-center">
+<div class="card w-50 shadow p-3 mb-3 offers-rental-card">
+  <div class="card-body">
+    <h5 class="card-title">White Crib</h5>
+   <ul class="card-text">
+    <li>Price: 30 USD / daily rate </li>
+    <li>Crib for newborn to one year old.</li>
+    </ul>
+ <a href="#" class="button-edit">Edit</a>
+  </div>
+</div>
+</div>
+<div class = "col d-flex justify-content-center">
+<div class="card w-50 shadow p-3 offers-rental-card">
+  <div class= "card-body">
+    <h5 class="card-title">Wood Horse</h5>
+    <ul class="card-text">
+    <li>Price: 10 USD / daily rate </li>
+    <li>Wooden horse for ages five to 6.</li>
+    </ul>
+ <a href="#" class="button-edit">Edit</a>
+  </div>
+</div>
+</div>
+</div>
+
+<h1 class = "text-center rental-title mb-3 mt-3 request">Rental Requests</h1>
+<div class = "my-offers">
+<div class = "col d-flex justify-content-center">
+<div class="card w-50 shadow p-3  mb-3 offers-rental-card">
+  <div class="card-body">
+    <h5 class="card-title">White Crib</h5>
+    <ul class="card-text">
+    <li>Price: 60 USD</li>
+    <li>Username: Luna123 </li>
+    <li>Rental period: 05/22 to 05/25</li>
+     <li>Address: 123 Skyline Ave. SD CA 92154</li>
+    </ul>
+    <a href="#" class="button-accept">Accept</a>
+    <a href="#" class="button-decline">Decline</a>
+  </div>
+</div>
+</div>
+<div class = "col d-flex justify-content-center">
+<div class="card w-50 shadow p-3 offers-rental-card">
+  <div class= "card-body">
+    <h5 class="card-title">Wood Horse</h5>
+    <ul class="card-text">
+    <li>Price: 120 USD</li>
+    <li>Username: Cylus428 </li>
+    <li>Rental period: 06/05 to 06/30</li>
+     <li>Address: 1323 Oro St. CA 92128</li>
+    </ul>
+    <a href="#" class="button-accept">Accept</a>
+    <a href="#" class="button-decline">Decline</a>
+  </div>
+</div>
+</div>
+</div>
