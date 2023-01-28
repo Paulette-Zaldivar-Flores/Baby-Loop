@@ -19,8 +19,9 @@ class RequestsController < ApplicationController
     authorize @request
 
     if @request.save
-      redirect_to offer_path(@offer), notice: 'Request submitted.'
-      # to be changed to root_path, notice: 'Request submitted.'
+      redirect_to root_path, notice: 'Request submitted.'
+      # Alternative redirect
+      # redirect_to offer_path(@offer), notice: 'Request submitted.'
     else
       render 'offers/show'
     end
@@ -32,9 +33,9 @@ class RequestsController < ApplicationController
 
   private
 
-  # def set_request
-  #   @request = Request.find(params[:id])
-  # end
+  def set_request
+    @request = Request.find(params[:id])
+  end
 
   def request_params
     params.require(:request).permit(:start_date, :end_date, :status)
