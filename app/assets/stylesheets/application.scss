@@ -10,3 +10,36 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+
+}
+
+body{
+  background:#ffffff;
+  overflow-x: hidden;
+
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+a:hover{
+  color: #ffffff;
+
+}
+
+li{
+  list-style-type: none;
+}
+
+h1{
+  font-family:'Jost', sans-serif;
+}

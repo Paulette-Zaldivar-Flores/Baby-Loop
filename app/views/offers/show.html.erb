@@ -1,40 +1,48 @@
-<div class="container pt-4">
-  <h2><%= @offer.item_name %></h2>
-  <p><%= @offer.category %></p>
-  <p><%= @offer.description %></p>
-  <p>$<%= @offer.rate %></p>
+<div class="container-md pt-4 text-center">
+  <h2 class= "offers-title"><%= @offer.item_name %></h2>
+  <%= image_tag "car.jpg", class: "offers-image mb-3 mt-3" %>
+  <p>Category: <%= @offer.category %></p>
+  <p>Description: <%= @offer.description %></p>
+  <p>Price: $<%= @offer.rate %></p>
 </div>
 
-<div class="container">
+
+
+
+
+
+
+<div class="container-md">
   <%= simple_form_for [@offer, @request] do |f| %>
     <%= f.input :start_date, as: :date, html5: true %>
     <%= f.input :end_date, as: :date, html5: true %>
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "button" %>
   <% end %>
 </div>
 
-<%# These are links that will only be available to those who created the offer, uncomment if you want these %>
 
-<%# <div> %>
-<%# <%= if policy(@offer).edit? %>
-  <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %>
-<%# <% end %>
+<% # These are links that will only be available to those who created the offer, uncomment if you want these %>
 
-<%# <%= if policy(@offer).destroy? %>
-  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<%# <% end %>
-<%# </div> %>
+<% # <div> %>
+<% # <%= if policy(@offer).edit? %>
+  <% # <%= link_to "Edit this offer", edit_offer_path(@offer) %>
+<% # <% end %>
+
+<% # <%= if policy(@offer).destroy? %>
+  <% # <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<% # <% end %>
+<% # </div> %>
 
 
-<%# WILL LATER REPLACE SIMPLE FORM ABOVE %>
+<% # WILL LATER REPLACE SIMPLE FORM ABOVE %>
 
-<%# <%= form_with model: Request.new, authenticity_token: true do |f| %>
-  <%# <%= f.text_field :date, %>
-    <%# data: { %>
-      <%# controller: "flatpickr", %>
-      <%# flatpickr_date_format: "D j, Y", %>
-      <%# flatpickr_min_date: Time.zone.now, %>
-      <%# flatpickr_inline: true, %>
-      <%# flatpickr_mode: "range" %>
-    <%# } %>
-<%# <% end %>
+<% # <%= form_with model: Request.new, authenticity_token: true do |f| %>
+  <% # <%= f.text_field :date, %>
+    <% # data: { %>
+      <% # controller: "flatpickr", %>
+      <% # flatpickr_date_format: "D j, Y", %>
+      <% # flatpickr_min_date: Time.zone.now, %>
+      <% # flatpickr_inline: true, %>
+      <% # flatpickr_mode: "range" %>
+    <% # } %>
+<% # <% end %>
