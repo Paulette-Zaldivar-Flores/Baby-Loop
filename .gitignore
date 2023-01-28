@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+yarn-error.log
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
