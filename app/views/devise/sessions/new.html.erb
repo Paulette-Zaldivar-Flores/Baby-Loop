@@ -1,7 +1,7 @@
+<div class = "container mt-5" >
 <h2>Log in</h2>
-
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
-  data: {turbo: false}) do |f| %>
+                              data: { turbo: false }) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
@@ -14,8 +14,9 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "button" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
