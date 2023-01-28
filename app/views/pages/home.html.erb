@@ -62,33 +62,30 @@
 </div>
 
 
-<%# <h1 class = "text-center mb-3 mt-3 offer"> My Offers</h1>
+<h1 class = "text-center mb-3 mt-3 offer"> My Offers</h1>
 <div class = "my-offers">
-<div class = "col d-flex justify-content-center">
-<div class="card w-50 shadow p-3 mb-3 offers-rental-card">
-  <div class="card-body">
-    <h5 class="card-title">White Crib</h5>
-   <ul class="card-text">
-    <li>Price: 30 USD / daily rate </li>
-    <li>Crib for newborn to one year old.</li>
-    </ul>
- <a href="#" class="button-edit">Edit</a>
+  <div class="text-center">
+    <% if @offers.empty? %>
+      <p>You don't have any listings yet.</p>
+    <% else %>
   </div>
+    <% @offers&.each do |offer| %>
+    <div class = "col d-flex justify-content-center">
+      <div class="card w-50 shadow p-3 mb-3 offers-rental-card">
+        <div class="card-body">
+          <h5 class="card-title"><%= offer.item_name %></h5>
+          <ul class="card-text">
+            <li><%= offer.category %></li>
+            <li>Price: <%= offer.rate %> USD / daily rate </li>
+            <li><%= offer.description %></li>
+          </ul>
+          <a href="#" class="button-edit">Edit</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
 </div>
-</div>
-<div class = "col d-flex justify-content-center">
-<div class="card w-50 shadow p-3 offers-rental-card">
-  <div class= "card-body">
-    <h5 class="card-title">Wood Horse</h5>
-    <ul class="card-text">
-    <li>Price: 10 USD / daily rate </li>
-    <li>Wooden horse for ages five to 6.</li>
-    </ul>
- <a href="#" class="button-edit">Edit</a>
-  </div>
-</div>
-</div>
-</div> %>
 
 <h1 class = "text-center rental-title mb-3 mt-3 request" id = "rental-requests">Rental Requests</h1>
 <div class = "my-offers">
@@ -104,9 +101,7 @@
           <h5 class="card-title"><%= request.offer.item_name %></h5>
           <ul class="card-text">
             <li>Total price: <%= ((request.end_date - request.start_date) / 86400) * request.offer.rate %> USD</li>
-            <%# <li>Username: Luna123 </li> %>
             <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
-            <%# <li>Address: 123 Skyline Ave. SD CA 92154</li> %>
             <li>Status: <%= request.status %></li>
           </ul>
           <%# <a href="#" class="button-accept">Accepted</a>
@@ -116,20 +111,4 @@
     </div>
     <% end %>
   <% end %>
-<%# <div class = "col d-flex justify-content-center">
-<div class="card w-50 shadow p-3 offers-rental-card">
-  <div class= "card-body">
-    <h5 class="card-title">Wood Horse</h5>
-    <ul class="card-text">
-    <li>Price: 120 USD</li>
-    <li>Username: Cylus428 </li>
-    <li>Rental period: 06/05 to 06/30</li>
-    <li>Address: 1323 Oro St. CA 92128</li>
-    <li>Status: Pending</li>
-    </ul>
-    <a href="#" class="button-accept">Accept</a>
-    <a href="#" class="button-decline">Decline</a>
-  </div>
-</div>
-</div> %>
 </div>
