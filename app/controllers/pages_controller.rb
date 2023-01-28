@@ -8,5 +8,7 @@ class PagesController < ApplicationController
     else
       @requests = []
     end
+
+    @offers = Offer.all
   end
 end
