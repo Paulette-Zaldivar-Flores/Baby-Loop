@@ -22,17 +22,34 @@
 
 <div class = "our-products">
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card background">
-      <%= image_tag "car.jpg", class: "card-image-top" %>
-      <div class="card-body">
-        <h5 class="card-title product">Red Car</h5>
-        <p class="card-text product-text">
+<div class="col">
+
+  <%= @offers.each do |offer| %>
+   <div class="card background">
+   <%= image_tag "car.jpg", class: "card-image-top" %>
+  <div class="card-body">
+    <h5 class="card-title product"><%= offer.item_name %></h5>
+    <p class="card-text product-text"> <%= offer.rate %> </p>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+  <%# <div class="col">
+  <%= link_to offer_path(@offer) do %>
+    <%# <div class="card background"> %>
+      <%# <%= image_tag "car.jpg", class: "card-image-top" %>
+      <%# <div class="card-body"> %>
+        <%# <h5 class="card-title product">Red Car</h5> %>
+        <%# <p class="card-text product-text">
          8.50 USD
-        </p>
+        </p> %>
+      <%# </div>
     </div>
-  </div>
-  </div>
+  <% end %>
+  <%# </div> %>
+
    <div class="col">
     <div class="card background">
       <%= image_tag "duck.jpg", class: "card-image-top" %>
