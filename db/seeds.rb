@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'open-uri'
+
+def grab_image(url, offer)
+  downloaded_image = URI.open(url)
+  offer.photo.attach(io: downloaded_image, filename: "#{url}.jpg")
+end
 
 puts "Cleaning database..."
 Offer.destroy_all
@@ -25,8 +31,9 @@ Offer.create!(
   rate: "15",
   category: "Furniture",
   description: "A cute white crib made out of oak wood"
-  # picture_url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200"
+  # "v1674729874/Baby Loop/crib_uo9z70.jpg"
 )
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729874/Baby%20Loop/crib_uo9z70.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -34,8 +41,9 @@ Offer.create!(
   rate: "8",
   category: "Toys",
   description: "A cute little car"
-  # picture_url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200"
+  # picture_url: "v1674729870/Baby Loop/car_e7ztnb.jpg"
 )
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729870/Baby%20Loop/car_e7ztnb.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -43,8 +51,9 @@ Offer.create!(
   rate: "2",
   category: "Toys",
   description: "A cute little yellow rubber duck, great for bathtime."
-  # picture_url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200"
+  # picture_url: "v1674729866/Baby Loop/duck_t23ohe.jpg"
 )
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%20Loop/duck_t23ohe.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -52,7 +61,8 @@ Offer.create!(
   rate: "25",
   category: "Toys",
   description: "A horse made out of oak wood."
-  # picture_url: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200"
+  # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%20Loop/horse_gsh1pc.jpg", Offer.last)
 
 puts "Finished!"
