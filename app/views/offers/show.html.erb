@@ -1,16 +1,14 @@
 <div class="container-md pt-4 text-center">
   <h2 class= "offers-title"><%= @offer.item_name %></h2>
-  <%= image_tag "car.jpg", class: "offers-image mb-3 mt-3" %>
+   <% if @offer.photo.attached? %>
+    <%= cl_image_tag @offer.photo.key, class: "offers-image" %>
+  <% else %>
+    <%= image_tag "blockset.jpg", class: "offers-image" %>
+  <% end %>
   <p>Category: <%= @offer.category %></p>
   <p>Description: <%= @offer.description %></p>
   <p>Price: $<%= @offer.rate %></p>
 </div>
-
-
-
-
-
-
 
 <div class="container-md">
   <%= simple_form_for [@offer, @request] do |f| %>
@@ -23,15 +21,15 @@
 
 <% # These are links that will only be available to those who created the offer, uncomment if you want these %>
 
-<% # <div> %>
-<% # <%= if policy(@offer).edit? %>
-  <% # <%= link_to "Edit this offer", edit_offer_path(@offer) %>
-<% # <% end %>
+<%# <div> %>
+<%# <% if policy(@offer).edit? %>
+  <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %>
+<%# <% end %>
 
-<% # <%= if policy(@offer).destroy? %>
-  <% # <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<% # <% end %>
-<% # </div> %>
+<%# <% if policy(@offer).destroy? %>
+  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%# <% end %>
+<%# </div> %>
 
 
 <% # WILL LATER REPLACE SIMPLE FORM ABOVE %>
