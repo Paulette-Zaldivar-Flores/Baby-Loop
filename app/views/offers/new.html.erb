@@ -1,0 +1,8 @@
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :item_name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :rate %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
