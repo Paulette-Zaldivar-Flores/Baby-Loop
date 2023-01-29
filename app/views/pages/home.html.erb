@@ -1,8 +1,10 @@
-<div class="banner">
-  <%= image_tag "banner_babyloop.png", class: "banner" %>
-  <h1 class = "banner-h1">Rent With Us</h1>
+<div class="banner position-relative" style="background-image: url('<%=path_to_image('banner_babyloop.png')%>')">
+  <div class="container">
+    <h1>Rent With Us</h1>
     <p>Baby Gear and More</p>
-  <a href="#" class = "banner-button">Rent Now</a>
+    <a href="#" class = "banner-button">Rent Now</a>
+    </div>
+  </div>
 </div>
 
 <div class = "our-products">
@@ -20,22 +22,21 @@
     <div class="col mid-button"><a href="#" class = "button">Rent Now</a></div>
 </div>
 
-<div class = "our-products">
-<div class="row row-cols-1 row-cols-md-3 g-4">
-
+<div class = "carousel-products">
+<div class="row row-cols-12 row-cols-md-4">
   <% @offers.each do |offer| %>
     <%= link_to offer_path(offer) do %>
-      <div class="col">
+    <div class = "col">
         <div class="card background">
           <% if offer.photo.attached? %>
             <%= cl_image_tag offer.photo.key, class: "card-image-top" %>
           <% else %>
-            <%= image_tag "blockset.jpg", class: "card-image-top" %>
+          <%= image_tag "blockset.jpg", class: "card-image-top" %>
           <% end %>
           <div class="card-body">
             <h5 class="card-title product"><%= offer.item_name %></h5>
             <p class="card-text product-text"> <%= offer.rate %> USD/day</p>
-          </div>
+            </div>
         </div>
       </div>
     <% end %>
