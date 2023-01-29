@@ -1,20 +1,31 @@
-.banner img{
-  height: 600px;
-  width: 100%;
+// .banner img{
+//   height: 600px;
+//   width: 100%;
+// }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+  display: flex;
+  background-position: 0px 60px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .banner h1, .banner p {
   color: #6667AA;
   position: absolute;
-  top: 50%;
   left: 50px;
   font-family: 'Jost', sans-serif;
+  top: 40%;
 }
 
 .banner p{
   color: black;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50px;
 }
 
@@ -26,7 +37,7 @@
   font-weight: bold;
   font-size:16px;
   position: absolute;
-  top: 80%;
+  top: 65%;
   left: 50px;
     }
 
