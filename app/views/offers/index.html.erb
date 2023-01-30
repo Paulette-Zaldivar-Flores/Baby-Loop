@@ -1,4 +1,19 @@
 <h1 class = "text-center mb-3 mt-3 offer"> My Offers</h1>
+<div class = "container-sm mb-3">
+<div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :item_name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :rate %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "button" %>
+<% end %>
+</div>
+</div>
+</div>
+
 <div class = "my-offers">
   <div class="text-center">
     <% if @offers.empty? %>
@@ -16,6 +31,7 @@
             <li><%= offer.description %></li>
           </ul>
           <a href="#" class="button-edit">Edit</a>
+          <%= link_to "Delete", offer_path(offer), class: "button-decline", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
         </div>
       </div>
     </div>
