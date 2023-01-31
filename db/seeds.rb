@@ -28,9 +28,9 @@ User.create!(
 Offer.create!(
   user: User.all.sample,
   item_name: "Baby Crib",
-  rate: "7",
-  rating: "5"
-  address: "102 Miyazakidai Denen Mansion, Miyamaedaira 3-3-13, Miyamae Ward, Kawasaki City, Kanagawa 216-0006"
+  rate: "2000",
+  rating: "5",
+  address: "216-0006, Miyamae-shi, Kawasaki City, Kanagawa",
   category: "Furniture",
   description: "A cute white crib made out of oak wood"
   # "v1674729874/Baby Loop/crib_uo9z70.jpg"
@@ -40,9 +40,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729874/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Red Car",
-  rate: "1",
-  rating: "4"
-  address: "2-chōme-9-11 Minamiazabu, Minato City, Tokyo 106-0047"
+  rate: "100",
+  rating: "4",
+  address: "106-0047, Minato City, Tokyo",
   category: "Toys",
   description: "A cute little car"
   # picture_url: "v1674729870/Baby Loop/car_e7ztnb.jpg"
@@ -52,9 +52,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729870/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Yellow Duck",
-  rate: "0.5",
-  rating: "2"
-  address: "1-chōme-2-31 Oyamadai, Setagaya City, Tokyo 158-0086"
+  rate: "150",
+  rating: "2",
+  address: "158-0086, Setagaya-ku, Tokyo",
   category: "Toys",
   description: "A little yellow rubber duck, great for bathtime."
   # picture_url: "v1674729866/Baby Loop/duck_t23ohe.jpg"
@@ -64,9 +64,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Wooden Horse",
-  rate: "1",
-  rating: "2"
-  address: "Plaza Hakusan 203,Bunkyoku Hakusan 2-13-15, Tokyo 112-0001"
+  rate: "150",
+  rating: "2",
+  address: "112-0001, Bunkyo-ku, Tokyo",
   category: "Toys",
   description: "A horse made out of oak wood."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -76,9 +76,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Car seat",
-  rate: "4",
-  rating: "5"
-  address: "Takadanobaba, 1 Chome-34-6,Shinjuku City, Tokyo 169-0075"
+  rate: "2000",
+  rating: "5",
+  address: "169-0075, Shinjuku-ku, Tokyo",
   category: "Furniture",
   description: "A todler car seat to enjoy your trips with your family "
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -88,9 +88,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114234/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Booster chair",
-  rate: "2",
-  rating: "3"
-  address: " Shibuya City, Hatagaya, 2-chōme-19ー1, Tokyo 151-0072"
+  rate: "500",
+  rating: "3",
+  address: " 151-0072, Shibuya-ku, Tokyo ",
   category: "Furniture",
   description: "Portable toddler booster seat for dining table with dishwasher safe tray"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -100,9 +100,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Snow gear",
-  rate: "3",
-  rating: "4"
-  address: "9-4 Towaen, Nagaokakyo-shi Kyoto, Japan 617-0834"
+  rate: "200",
+  rating: "4",
+  address: "617-0834, Nagaokakyo-shi Kyoto, Japan",
   category: "Clothes",
   description: "80cm, snow gear with protection to keep your baby warm"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -112,9 +112,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114227/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Shinapushyu baby jacket",
-  rate: "1",
-  rating: "5"
-  address: "03 Furutaka, 406-2 Furutaka-cho, Moriyama-shi, Shiga-ken 524-0044"
+  rate: "300",
+  rating: "5",
+  address: "524-0044, Moriyama-shi, Shiga-ken",
   category: "Clothes",
   description: "80cm Unissex jacket, from the popular youtube show Shinapushyu"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -124,9 +124,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114493/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Stroller",
-  rate: "8",
-  rating: "4"
-  address: "Hamamatsu Tenma Building 503, Tenma-cho 311-14, Hamamatsu-shi, 430-0935 Shizuoka-ken"
+  rate: "1500",
+  rating: "4",
+  address: "430-0935, Hamamatsu-shi, Shizuoka-ken",
   category: "Accessories and goods",
   description: "3 wheel stroller,  designed to tackle all types of surfaces "
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -135,10 +135,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Anpanman Easy Assembly Swing Set Park"
-  rate: "5",
-  rating: "2.8"
-  address: "Sankyo Yokohama Building 201, Chojamachi 5-85, Naka-ku, Yokohama-shi 231-0033, Kanagawa-ken"
+  item_name: "Anpanman Easy Assembly Swing Set Park",
+  rate: "500",
+  rating: "2.8",
+  address: "231-0033, Naka-ku, Yokohama-shi,  Kanagawa-ken",
   category: "Toys",
   description: "Easy to assembly and fold, you can have a park at your own place"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -147,10 +147,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Anpanman portable piano"
-  rate: "3.5",
-  rating: "4.3"
-  address: "Chouette D 106, 21-2 Karahashi Omiyajiricho, Minami-ku, Kyoto-shi, Kyoto 601-8467"
+  item_name: "Anpanman portable piano",
+  rate: "400",
+  rating: "4.3",
+  address: "601-8467,Minami-ku, Kyoto-shi, Kyoto",
   category: "Toys",
   description: "Portable piano and musical set, with the popular Anpanman songs"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -159,10 +159,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Mify baby bathtub"
-  rate: "4",
-  rating: "5"
-  address: "4-1-3-1112 Asahi-dori, Chuo-ku, Kobe-shi, Hyogo-ken, 651-0095"
+  item_name: "Mify baby bathtub",
+  rate: "900",
+  rating: "5",
+  address: "651-0095, Chuo-ku, Kobe-shi, Hyogo-ken",
   category: "Accessories and goods",
   description: "Baby bathtub for childrens from age 0 to one and a half years"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -172,10 +172,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Baby carrier"
-  rate: "5",
-  rating: "4.9"
-  address: "Takatsu Ward, Kawasaki, Kanagawa 213-0035"
+  item_name: "Baby carrier",
+  rate: "700",
+  rating: "4.9",
+  address: "213-0035, Takatsu-shi, Kawasaki, Kanagawa ",
   category: "Accessories and goods",
   description: "Confortable baby carrier with different type of adjustments"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -185,10 +185,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Wooden Activity Cube"
-  rate: "1",
-  rating: "3"
-  address: "Kumaushi, Hamanaka-cho Akkeshi-gun, Hokkaido 350-1289"
+  item_name: "Wooden Activity Cube",
+  rate: "150",
+  rating: "3",
+  address: "350-1289, Hamanaka-cho Akkeshi-gun, Hokkaido ",
   category: "Toys",
   description: "Activity cube with different format shapes with numbers and figures"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -198,10 +198,10 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Curious George set of ilustrate books"
-  rate: "2",
-  rating: "4"
-  address: "2-17-38 Asano, Kokurakita-ku, Kitakyushu-shi, Fukuoka, 802-0001"
+  item_name: "Curious George set of ilustrate books",
+  rate: "300",
+  rating: "4",
+  address: "802-0001, Kokurakita-ku, Kitakyushu-shi, Fukuoka",
   category: "Books",
   description: "3 image books, from Curious George"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
@@ -211,15 +211,14 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Baby Playmat"
-  rate: "6",
-  rating: "3"
-  address: "6-chōme-1-15 Nagasaki, Toshima City, Tokyo 171-0051"
-  category: "",
+  item_name: "Baby Playmat",
+  rate: "200",
+  rating: "3",
+  address: "171-0051, Toshima-ku, Tokyo",
+  category: "Accessories and goods",
   description: "120 x 160cm Baby playmat"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/239868725_rul77v.webp", Offer.last)
-
 
 puts "Finished!"
