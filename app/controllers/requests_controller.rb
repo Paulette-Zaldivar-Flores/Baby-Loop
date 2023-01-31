@@ -2,12 +2,7 @@ class RequestsController < ApplicationController
   # before_action :set_request, only: %i[] #update destroy
 
   def index
-    if current_user
-      @user = current_user
-      @requests = @user.requests
-    else
-      @requests = []
-    end
+    @requests = policy_scope(Request)
   end
 
   def new
