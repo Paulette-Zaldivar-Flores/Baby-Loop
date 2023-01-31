@@ -18,6 +18,12 @@
   <% end %>
 </div>
 
+<%# GEOCODE MAP %>
+<div style="width: 400px; height: 300px;"
+  data-controller="map"
+  data-map-markers-value="<%= @marker.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 
 <% # These are links that will only be available to those who created the offer, uncomment if you want these %>
 
