@@ -1,8 +1,14 @@
 class RequestsController < ApplicationController
   # before_action :set_request, only: %i[] #update destroy
 
-  # def index
-  # end
+  def index
+    if current_user
+      @user = current_user
+      @requests = @user.requests
+    else
+      @requests = []
+    end
+  end
 
   def new
     @request = Request.new
@@ -19,7 +25,7 @@ class RequestsController < ApplicationController
     authorize @request
 
     if @request.save
-      redirect_to root_path, notice: 'Request submitted.'
+      redirect_to requests_path, notice: 'Request submitted.'
       # Alternative redirect
       # redirect_to offer_path(@offer), notice: 'Request submitted.'
     else

@@ -7,6 +7,7 @@ class RequestPolicy < ApplicationPolicy
   end
 
   def index?
+    true
   end
 
   def new?
