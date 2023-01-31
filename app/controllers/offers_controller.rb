@@ -5,7 +5,7 @@ class OffersController < ApplicationController
     authorize @offer
     @request = Request.new
 
-    @marker = [lat: @offer.latitude, lng: @offer.longitude]
+    @marker = [{ lat: @offer.latitude, lng: @offer.longitude }]
   end
 
   # TO BE MODIFIED
