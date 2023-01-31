@@ -31,7 +31,7 @@ class OfferPolicy < ApplicationPolicy
   #   ecord.user == user
   # end
 
-  # def destroy?
-  #   record.user == user
-  # end
+  def destroy?
+    record.user == user
+  end
 end

@@ -1,15 +1,15 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: %i[show] #edit update destroy
+  before_action :set_offer, only: %i[show destroy] #edit update
+
+  def index
+    @offers = policy_scope(Offer).all
+    @offer = Offer.new
+  end
 
   def show
     authorize @offer
     @request = Request.new
   end
-
-  # TO BE MODIFIED
-  # def index
-  #   @offers = policy_scope(Offer).all
-  # end
 
   def new
     @offer = Offer.new
@@ -21,8 +21,9 @@ class OffersController < ApplicationController
     @offer.user = current_user
     authorize @offer
 
+
     if @offer.save
-      redirect_to @offer, notice: "Offer was successfully created."
+      redirect_to offers_path, notice: "Offer was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -42,11 +43,11 @@ class OffersController < ApplicationController
   #   end
   # end
 
-  # def destroy
-  #   authorize @offer
-  #   @offer.destroy
-  #   redirect_to :index, notice: "Restaurant was successfully destroyed."
-  # end
+  def destroy
+    authorize @offer
+    @offer.destroy
+    redirect_to offers_path, notice: "Offer was successfully deleted."
+  end
 
   private
 
