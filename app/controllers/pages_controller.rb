@@ -9,6 +9,6 @@ class PagesController < ApplicationController
       @requests = []
     end
 
-    @offers = Offer.all
+    @offers = Offer.all[0..3]
   end
 end
