@@ -1,0 +1,40 @@
+<h1 class = "text-center mb-3 mt-3 offer"> My Offers</h1>
+<div class = "container-sm mb-3">
+<div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :item_name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :rate %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "button" %>
+<% end %>
+</div>
+</div>
+</div>
+
+<div class = "my-offers">
+  <div class="text-center">
+    <% if @offers.empty? %>
+      <p>You don't have any listings yet.</p>
+    <% else %>
+  </div>
+    <% @offers&.each do |offer| %>
+    <div class = "col d-flex justify-content-center">
+      <div class="card w-50 shadow p-3 mb-3 offers-rental-card">
+        <div class="card-body">
+          <h5 class="card-title"><%= offer.item_name %></h5>
+          <ul class="card-text">
+            <li><%= offer.category %></li>
+            <li>Price: <%= offer.rate %> USD / daily rate </li>
+            <li><%= offer.description %></li>
+          </ul>
+          <a href="#" class="button-edit">Edit</a>
+          <%= link_to "Delete", offer_path(offer), class: "button-decline", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
