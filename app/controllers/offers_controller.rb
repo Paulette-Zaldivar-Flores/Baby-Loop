@@ -9,6 +9,8 @@ class OffersController < ApplicationController
   def show
     authorize @offer
     @request = Request.new
+
+    @marker = [{ lat: @offer.latitude, lng: @offer.longitude }]
   end
 
   def new
