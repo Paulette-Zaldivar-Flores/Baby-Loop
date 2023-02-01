@@ -4,5 +4,7 @@ class Lessor::RequestPolicy < ApplicationPolicy
     # def resolve
     #   scope.all
     # end
+    policy_scope([:lessor, Request])
+    authorize([:lessor, @request])
   end
 end
