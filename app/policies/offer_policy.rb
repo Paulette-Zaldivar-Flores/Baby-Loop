@@ -22,6 +22,11 @@ class OfferPolicy < ApplicationPolicy
     true
   end
 
+  def my_offers?
+    true
+  end
+
+
   ######## We currently don't have an edit option yet for our offers
   # def edit?
   #   update?

@@ -6,6 +6,11 @@ class OffersController < ApplicationController
     @offer = Offer.new
   end
 
+  def my_offers
+    @my_offers = Offer.where(user: current_user)
+    authorize @my_offers
+  end
+
   def show
     authorize @offer
     @request = Request.new
@@ -59,6 +64,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:item_name, :category, :description, :rate, :photo)
+    params.require(:offer).permit(:item_name, :category, :description, :rate, :photo, :address)
   end
 end
