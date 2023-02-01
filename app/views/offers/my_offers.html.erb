@@ -1,0 +1,56 @@
+<h1 class = "mb-3 mt-3 text-center offer"> My Offers</h1>
+<div class = "container-sm mb-3 d-flex">
+<div class="row">
+<div class="col">
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :item_name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :rate %>
+    <%= f.input :address %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "button" %>
+<% end %>
+</div>
+
+
+
+<div class = "col col-md">
+<div class = "my-offers">
+  <div class="text-center">
+    <% if @offers.empty? %>
+      <p>You don't have any listings yet.</p>
+    <% else %>
+  </div>
+    <% @offers&.each do |offer| %>
+      <div class="card shadow mb-3 mt-3 ms-3 offers-rental-card">
+        <div class="card-body">
+          <h5 class="card-title"><%= offer.item_name %></h5>
+          <div class = "row">
+          <div class = "col">
+          <% if offer&.photo&.key %>
+            <%= cl_image_tag offer.photo.key, height: 150, width: 250, crop: :fill %>
+            <% end %>
+            </div>
+            <div class = "col">
+          <ul class="card-text">
+            <li>Category: <%= offer.category %></li>
+            <li>Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
+            <li>Description: <%= offer.description %> </li>
+            <li>Address: <%= offer.address %> </li>
+            <br>
+          </ul>
+          <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          <a href="#" class="button-edit">Edit</a>
+
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+</div>
+</div>
+</div>

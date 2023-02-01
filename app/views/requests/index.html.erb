@@ -10,6 +10,10 @@
       <div class="card w-50 shadow p-3  mb-3 offers-rental-card">
         <div class="card-body">
           <h5 class="card-title"><%= request.offer.item_name %></h5>
+          <%# <% if request&.photo&.key %>
+            <%# <%= cl_image_tag request.photo.key, height: 150, width: 250, crop: :fill %>
+            <%# <% end %>
+            <%# </div> %>
           <ul class="card-text">
             <li>Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: '¥', precision: 0 }) %></li>
             <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>

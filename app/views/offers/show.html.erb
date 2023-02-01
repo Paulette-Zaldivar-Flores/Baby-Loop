@@ -9,14 +9,15 @@
       <% end %>
       <p>Category: <%= @offer.category %></p>
       <p>Description: <%= @offer.description %></p>
-      <p>Price: <%= number_to_currency(@offer.rate, {unit: '¥', precision: 0}) %>/day</p>
+      <p>Location:  <%= @offer.address %></p>
+      <p>Price: <%= number_to_currency(@offer.rate, { unit: "¥", precision: 0 }) %>/day</p>
     </div>
 
     <div class="col md-6 map-padding">
       <div style="width: 400px; height: 300px;"
         data-controller="map"
         data-map-markers-value="<%= @marker.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        data-map-api-key-value="<%= ENV["MAPBOX_API_KEY"] %>">
       </div>
     </div>
   </div>
@@ -32,20 +33,20 @@
   <% end %>
 </div>
 
-<%# GEOCODE MAP %>
+<% # GEOCODE MAP %>
 
 
 <% # These are links that will only be available to those who created the offer, uncomment if you want these %>
 
-<%# <div> %>
-<%# <% if policy(@offer).edit? %>
-  <%# <%= link_to "Edit this offer", edit_offer_path(@offer) %>
-<%# <% end %>
+<% # <div> %>
+<% # <% if policy(@offer).edit? %>
+  <% # <%= link_to "Edit this offer", edit_offer_path(@offer) %>
+<% # <% end %>
 
-<%# <% if policy(@offer).destroy? %>
-  <%# <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<%# <% end %>
-<%# </div> %>
+<% # <% if policy(@offer).destroy? %>
+  <% # <%= button_to "Delete this offer", @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<% # <% end %>
+<% # </div> %>
 
 
 <% # WILL LATER REPLACE SIMPLE FORM ABOVE %>

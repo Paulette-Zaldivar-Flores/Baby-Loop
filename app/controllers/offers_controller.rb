@@ -1,8 +1,8 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: %i[show destroy] #edit update
+  before_action :set_offer, only: %i[show destroy]
 
   def index
-    @offers = policy_scope(Offer).all
+    @offers = policy_scope(Offer)
     @offer = Offer.new
   end
 
