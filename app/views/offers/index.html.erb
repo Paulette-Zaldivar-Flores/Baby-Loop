@@ -35,7 +35,7 @@
             <div class = "col">
           <ul class="card-text">
             <li>Category: <%= offer.category %></li>
-            <li>Price: <%= offer.rate %> USD / per day </li>
+            <li>Price: <%= number_to_currency(offer.rate, {unit: '¥', precision: 0}) %>/day </li>
             <li>Description: <%= offer.description %> </li>
             <br>
             <li><%= link_to "Delete", offer_path(offer), class: "button-decline", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>

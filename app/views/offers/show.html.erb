@@ -9,7 +9,7 @@
       <% end %>
       <p>Category: <%= @offer.category %></p>
       <p>Description: <%= @offer.description %></p>
-      <p>Price: $<%= @offer.rate %></p>
+      <p>Price: <%= number_to_currency(@offer.rate, {unit: '¥', precision: 0}) %>/day</p>
     </div>
 
     <div class="col md-6 map-padding">

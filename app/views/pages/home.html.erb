@@ -35,7 +35,7 @@
           <% end %>
           <div class="card-body">
             <h5 class="card-title product"><%= offer.item_name %></h5>
-            <p class="card-text product-text"> <%= offer.rate %> JPY/day</p>
+            <p class="card-text product-text"> <%= number_to_currency(offer.rate, {unit: '¥', precision: 0}) %>/day</p>
             </div>
         </div>
       </div>
