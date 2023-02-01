@@ -11,7 +11,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= request.offer.item_name %></h5>
           <ul class="card-text">
-            <li>Total price: <%= ((request.end_date - request.start_date) / 86400) * request.offer.rate %> USD</li>
+            <li>Total price: ¥ <%= ((request.end_date - request.start_date) / 86400) * request.offer.rate %></li>
             <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
             <li>Status: <%= request.status %></li>
           </ul>
