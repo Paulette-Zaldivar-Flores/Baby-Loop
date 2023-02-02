@@ -3,14 +3,21 @@
     <div class="col md-6 text-center">
       <h2 class= "offers-title"><%= @offer.item_name %></h2>
       <% if @offer.photo.attached? %>
-        <%= cl_image_tag @offer.photo.key, class: "offers-image" %>
+        <%= cl_image_tag @offer.photo.key, class: "offers-image", height: 250, width: 200 %>
       <% else %>
-        <%= image_tag "blockset.jpg", class: "offers-image" %>
+        <%= image_tag "blockset.jpg", class: "offers-image", height: 250, width: 200 %>
       <% end %>
-      <p>Category: <%= @offer.category %></p>
-      <p>Description: <%= @offer.description %></p>
-      <p>Location:  <%= @offer.address %></p>
-      <p>Price: <%= number_to_currency(@offer.rate, { unit: "¥", precision: 0 }) %>/day</p>
+      <div class = "offers-text">
+      <ul>
+      <li>Category: <%= @offer.category %></li>
+        <br>
+      <li>Description: <%= @offer.description %></li>
+        <br>
+      <li>Location:  <%= @offer.address %></li>
+        <br>
+      <li>Price: <%= number_to_currency(@offer.rate, { unit: "¥", precision: 0 }) %>/day</li>
+      </ul>
+      </div>
     </div>
 
     <div class="col md-6 map-padding">
@@ -25,7 +32,7 @@
 
 
 
-<div class="container-md">
+<div class="container">
   <%= simple_form_for [@offer, @request] do |f| %>
     <%= f.input :start_date, as: :date, html5: true %>
     <%= f.input :end_date, as: :date, html5: true %>

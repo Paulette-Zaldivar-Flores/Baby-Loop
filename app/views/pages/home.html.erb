@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Rent With Us</h1>
     <p>Baby Gear and More</p>
-    <a href="#" class = "banner-button">Rent Now</a>
+    <%= link_to "Rent Now", offers_path, class: "banner-button" %>
     </div>
   </div>
 </div>
@@ -19,7 +19,7 @@
 <div class="row centered">
     <div class="col">
   <%= image_tag "crib.jpg", class: "main-page-product" %></div>
-    <div class="col mid-button"><a href="#" class = "button">Rent Now</a></div>
+    <div class="col mid-button">  <%= link_to "Rent Now", offers_path, class: "button" %></div>
 </div>
 
 <div class = "carousel-products">
@@ -29,7 +29,7 @@
     <div class = "col">
         <div class="card background">
           <% if offer.photo.attached? %>
-            <%= cl_image_tag offer.photo.key, class: "card-image-top" %>
+            <%= cl_image_tag offer.photo.key, class: "card-image-top", height: 200, width: 200 %>
           <% else %>
           <%= image_tag "blockset.jpg", class: "card-image-top" %>
           <% end %>
@@ -55,7 +55,7 @@
         <li class = "categories">Clothes</li>
         <li class = "categories">Shoes</li>
       </ul>
-  <a href="#" class = "button view-more-button">View More</a>
+    <%= link_to "View More", offers_path, class: "button view-more-button" %>
   </div>
 <div class="col">
   <%= image_tag "duck.jpg", class: "categories-product" %>
