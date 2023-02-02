@@ -6,6 +6,22 @@ class Lessor::RequestsController < ApplicationController
     # Is the same as
     # @requests_per_offer = @requests.group_by(&:offer)
   end
+
+  def update
+    @request = Request.find(params[:id])
+    authorize @request
+    if @request.update(request_params)
+      redirect_to lessor_requests_path
+      # :back refreshes the page
+    else
+      flash.alert = "Could not complete the action."
+    end
+  end
+
+  private
+
+  def request_params
+    # TODO: check your model, might be different than mine
+    params.require(:request).permit(:status)
+  end
 end
-# Anywhere but in the index
-# authorize([:lessor, @request])
