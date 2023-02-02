@@ -29,7 +29,6 @@ class OffersController < ApplicationController
     @offer.user = current_user
     authorize @offer
 
-
     if @offer.save
       redirect_to offers_path, notice: "Offer was successfully created."
     else
