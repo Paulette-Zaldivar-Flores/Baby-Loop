@@ -6,10 +6,10 @@ class OffersController < ApplicationController
     @offer = Offer.new
   end
 
-  def my_offers
-    @my_offers = Offer.where(user: current_user)
-    authorize @my_offers
-  end
+  # def my_offers
+  #   @my_offers = Offer.where(user: current_user)
+  #   authorize @my_offers
+  # end
 
   def show
     authorize @offer
