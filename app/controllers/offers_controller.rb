@@ -15,6 +15,7 @@ class OffersController < ApplicationController
 
   def new
     @offer = Offer.new
+    @offers = Offer.where(user: current_user)
     authorize @offer
   end
 
