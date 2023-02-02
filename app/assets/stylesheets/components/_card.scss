@@ -22,11 +22,17 @@
 
 .offers-rental-card{
   background: #FAF9F3;
-  width: 542px;
+  width: 540px;
+  margin: 0 auto;
+  border-color: #37ab85;
 }
 
 .offers-rental-card .card-text{
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.margin-li{
+  margin-bottom: 10px;
 }
 
 .offer, .request{
