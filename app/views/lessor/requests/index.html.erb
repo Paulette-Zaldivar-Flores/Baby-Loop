@@ -1,1 +1,34 @@
-<h1>Hello</h1>
+<div class="container">
+  <h1>My requests and offers</h1>
+
+  <% @requests_per_offer.each do |offer, requests| %>
+    <div>
+      <div class="offer-card">
+        <%= offer.item_name %>
+      </div>
+      <% requests.each do |request| %>
+        <% unless request.status == 'rejected' %>
+          <div class="request-card">
+            <%= request.user.first_name %>
+            <%= request.start_date %>
+            <%= request.end_date %>
+            <%= request.status %>
+            <div class="d-flex">
+            <% if request.status == 'pending' %>
+              <%= simple_form_for [:lessor, request] do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                <%= f.submit 'Accept', class: 'btn btn-info' %>
+              <% end %>
+
+              <%= simple_form_for [:lessor, request] do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                <%= f.submit 'Reject', class: 'btn btn-light' %>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

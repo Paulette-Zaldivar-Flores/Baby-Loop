@@ -19,5 +19,6 @@ class RequestPolicy < ApplicationPolicy
   end
 
   def update?
+    true
   end
 end
