@@ -17,10 +17,17 @@
           <li class="nav-item">
             <%= link_to "My Offers", new_offer_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Requests", requests_path, class: "nav-link" %>
-            <div id="my-offers"></div>
-          </li>
+
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Requests
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li class="nav-item"><%= link_to "Incoming Requests", lessor_requests_path, class: "dropdown-item nav-link" %></li>
+            <li class="nav-item"><%= link_to "Outgoing Requests", requests_path, class: "dropdown-item nav-link" %></li>
+          </ul>
+        </li>
+
           <li class="nav-item">
             <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link logout-button-navbar" %>
           </li>
