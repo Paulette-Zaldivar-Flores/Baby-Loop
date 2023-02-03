@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: %i[show destroy]
+  before_action :set_offer, only: %i[show edit update destroy]
 
   def index
     @offers = policy_scope(Offer)
@@ -30,30 +30,29 @@ class OffersController < ApplicationController
     authorize @offer
 
     if @offer.save
-      redirect_to offers_path, notice: "Offer was successfully created."
+      redirect_to new_offer_path, notice: "Offer was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  ######## WE CURRENTLY DON'T HAVE AN EDIT OR DELETE OPTION FOR OUR OFFERS
-  # def edit
-  #   authorize @offer
-  # end
+  def edit
+    authorize @offer
+  end
 
-  # def update
-  #   authorize @offer
-  #   if @offer.update(restaurant_params)
-  #     redirect_to @offer, notice: "Offer was successfully updated"
-  #   else
-  #     render :edit, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    authorize @offer
+    if @offer.update(offer_params)
+      redirect_to offer_path(@offer), notice: "Offer was successfully updated"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   def destroy
     authorize @offer
     @offer.destroy
-    redirect_to offers_path, notice: "Offer was successfully deleted."
+    redirect_to new_offer_path, notice: "Offer was successfully deleted."
   end
 
   private
