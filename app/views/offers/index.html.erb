@@ -1,5 +1,16 @@
 <div class = "container-lg mb-5 mt-5">
 <h1 class = "text-center products-page-title">Baby Loop Gear </h1>
+
+<%# Search bar %>
+<%= form_with url: offers_path, method: :get, class: "d-flex my-3" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search for a product or location"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="row pt-5 row-cols-12 row-cols-md-4 d-flex align-items-stretch">
   <% @offers.each do |offer| %>
     <div class = "col">
