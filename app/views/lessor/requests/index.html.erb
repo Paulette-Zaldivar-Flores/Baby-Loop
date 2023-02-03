@@ -10,8 +10,7 @@
         <% unless request.status == 'rejected' %>
           <div class="request-card">
             <%= request.user.first_name %>
-            <%= request.start_date %>
-            <%= request.end_date %>
+            <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %>
             <%= request.status %>
             <div class="d-flex">
             <% if request.status == 'pending' %>
