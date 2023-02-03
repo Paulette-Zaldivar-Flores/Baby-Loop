@@ -2,18 +2,23 @@
 <h1 class = "text-center products-page-title">Baby Loop Gear </h1>
 
 <%# Search bar %>
+<div class="row justify-content-center">
+        <div class="col">
 <%= form_with url: offers_path, method: :get, class: "d-flex my-3" do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
-    placeholder: "Search for a product or location"
+    class: "form-control mx-3 font-weight-light",
+    placeholder: "Search for a category, product or location..."
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "search-button" %>
 <% end %>
+</div>
+</div>
 
 <div class="row pt-5 row-cols-12 row-cols-md-4 d-flex align-items-stretch">
   <% @offers.each do |offer| %>
     <div class = "col">
+    <%= link_to offer_path(offer) do %>
         <div class="card product-card mb-3 mt-3 shadow">
           <% if offer.photo.attached? %>
             <%= cl_image_tag offer.photo.key, class: "card-image-top products-page-image d-flex" %>
@@ -21,11 +26,12 @@
           <%= image_tag "blockset.jpg", class: "card-image-top" %>
           <% end %>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title products-text"><%= offer.item_name %></h5>
+            <h5 class="card-title products-text-title"><%= offer.item_name %></h5>
             <p class="card-text products-text"> <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day</p>
-              <div><%= link_to "Rent", offer_path(offer), class: "products-button" %></div>
+            <p class = "card-text products-text"><%= offer.rating%></p>
             </div>
         </div>
+        <% end %>
       </div>
   <% end %>
   </div>

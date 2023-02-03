@@ -1,7 +1,13 @@
+.btn{
+  padding: 15px 25px;
+  border-radius: 50px;
+
+}
+
 .button {
-  padding: 15px 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
   background: #6667AA;
-  border-radius: 3px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -12,10 +18,31 @@
     color: white;
   }
 
+
+    .button:active, .btn:active {
+      vertical-align: top;
+  }
+
+
+
+  .search-button{
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: #6667AA;
+  color: white;
+  font-weight: bold;
+  font-size:16px;
+  }
+
+  .search-button:hover{
+    background:#7172ad;
+    color: white;
+  }
+
 .products-button{
-  padding: 15px 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
   background: #8486f0;
-  border-radius: 3px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -37,9 +64,9 @@
   }
 
   .button-accept{
-    padding: 15px 20px;
+    padding: 15px 25px;
   background: #6eb57e;
-  border-radius: 3px;
+  border-radius: 50px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -50,9 +77,9 @@
   }
 
   .button-decline{
-  padding: 15px 20px;
+  padding: 15px 25px;
   background: #c34d46;
-  border-radius: 3px;
+  border-radius: 50px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -63,9 +90,9 @@
   }
 
   .button-edit{
-  padding: 15px 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
   background: #49b5c5;
-  border-radius: 3px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -80,5 +107,4 @@
     background:#6667AA;
     box-shadow: none;
     border: none;
-
   }

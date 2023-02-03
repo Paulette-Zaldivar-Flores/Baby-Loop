@@ -40,7 +40,7 @@
             <li class = "margin-li">Category: <%= offer.category %></li>
             <li class = "margin-li">Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
             <li class = "margin-li">Description: <%= offer.description %> </li>
-            <li class = "margin-li">Address: <%= offer.address %> </li>
+            <li class =>Address: <%= offer.address %> </li>
             <br>
           </ul>
           <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
