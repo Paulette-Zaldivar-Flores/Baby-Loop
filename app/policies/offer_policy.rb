@@ -27,14 +27,13 @@ class OfferPolicy < ApplicationPolicy
     true
   end
 
-  ######## We currently don't have an edit option yet for our offers
-  # def edit?
-  #   update?
-  # end
+  def edit?
+    update?
+  end
 
-  # def update?
-  #   ecord.user == user
-  # end
+  def update?
+    record.user == user
+  end
 
   def destroy?
     record.user == user
