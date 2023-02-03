@@ -2,14 +2,19 @@ class OffersController < ApplicationController
   before_action :set_offer, only: %i[show destroy]
 
   def index
-    @offers = policy_scope(Offer)
+    if params[:query].present?
+      # sql_query = <<~SQL
+      #   offers.item_name @@ :query
+      #   OR offers.category @@ :query
+      #   OR offers.address @@ :query
+      # SQL
+      # @offers = policy_scope(Offer).where(sql_query, query: "%#{params[:query]}%")
+      @offers = policy_scope(Offer).search_by_item_name_and_category_and_address(params[:query])
+    else
+      @offers = policy_scope(Offer)
+    end
     @offer = Offer.new
   end
-
-  # def my_offers
-  #   @my_offers = Offer.where(user: current_user)
-  #   authorize @my_offers
-  # end
 
   def show
     authorize @offer

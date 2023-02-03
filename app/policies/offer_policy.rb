@@ -3,6 +3,7 @@ class OfferPolicy < ApplicationPolicy
     # NOTE: Be explicit about which records you allow access to!
     def resolve
       scope.all
+      # scope.where("item_name ILIKE ?", "%#{params[:query]}%")
     end
   end
 
