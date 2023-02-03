@@ -19,9 +19,17 @@ User.destroy_all
 puts "Creating offers and users..."
 User.create!(
   first_name: "Carl",
-  address: "10 Clifton Gardens London W9 1DT",
+  address: "Shibuya, Tokyo",
   last_name: "Eight",
   email: "carl@email.com",
+  password: '123456'
+)
+
+User.create!(
+  first_name: "Marie",
+  address: "Arakawa, Tokyo",
+  last_name: "Wagon",
+  email: "marie@email.com",
   password: '123456'
 )
 
@@ -30,7 +38,7 @@ Offer.create!(
   item_name: "Baby Crib",
   rate: "1000",
   rating: "5",
-  address: "Miyamae, Kanagawa",
+  address: "Minato, Tokyo",
   category: "Furniture",
   description: "A cute white crib made out of oak wood."
   # "v1674729874/Baby Loop/crib_uo9z70.jpg"
@@ -40,9 +48,9 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729874/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Red Car",
-  rate: "100",
+  rate: "50",
   rating: "4",
-  address: "Minato, Tokyo",
+  address: "Miyamae, Kanagawa",
   category: "Toys",
   description: "A cute little car, suitable for children from age 4."
   # picture_url: "v1674729870/Baby Loop/car_e7ztnb.jpg"
@@ -52,7 +60,7 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729870/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Yellow Duck",
-  rate: "100",
+  rate: "10",
   rating: "2",
   address: "Setagaya, Tokyo",
   category: "Toys",
@@ -64,7 +72,7 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%2
 Offer.create!(
   user: User.all.sample,
   item_name: "Wooden Horse",
-  rate: "150",
+  rate: "500",
   rating: "2",
   address: "Bunkyo, Tokyo",
   category: "Toys",
@@ -111,7 +119,7 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114227/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Shinapushyu Baby Jacket",
+  item_name: "Baby Jacket",
   rate: "300",
   rating: "5",
   address: "Moriyama, Shiga",
@@ -135,19 +143,19 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Anpanman Easy Assembly Swing Set Park",
+  item_name: "Swing Set",
   rate: "500",
-  rating: "2.8",
-  address: "Naka, Yokohama, Kanagawa",
+  rating: "4.8",
+  address: "Meguro, Tokyo",
   category: "Toys",
-  description: "Easy to assembly and fold, you can have a park at your own place!"
+  description: "Easy to assembly and fold, you can have an Anpanman-themed park at your own place!"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%20Loop/71EgDFGdADL._AC_SL1500__q5kp1h.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Anpanman Portable Piano",
+  item_name: "Portable Piano",
   rate: "400",
   rating: "4.3",
   address: "Minami-ku, Kyoto",
@@ -159,12 +167,12 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Miffy Baby Bathtub",
+  item_name: "Baby Bathtub",
   rate: "700",
   rating: "5",
-  address: "Chuo, Kobe, Hyogo",
+  address: "Ikebukuro, Tokyo",
   category: "Accessories and goods",
-  description: "Baby bathtub for children from age 0 to one and a half years."
+  description: "A Miffy-themed baby bathtub for children from age 0 to one and a half years."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/71_Z-4p1x1L._AC_SL1500__iitjos.jpg", Offer.last)
@@ -177,7 +185,7 @@ Offer.create!(
   rating: "4.9",
   address: "Takatsu, Kawasaki, Kanagawa",
   category: "Accessories and goods",
-  description: "Confortable baby carrier with different types of adjustments."
+  description: "Comfortable baby carrier with different types of adjustments."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%20Loop/61jmxdLgvyL._AC_SL1000__sz5tx1.jpg", Offer.last)
@@ -185,12 +193,12 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Wooden Activity Cubes",
+  item_name: "Activity Cubes",
   rate: "150",
   rating: "3",
-  address: "Hamanaka, Akkeshi, Hokkaido",
+  address: "Sapporo, Hokkaido",
   category: "Toys",
-  description: "Activity cubes with different format shapes with numbers and figures."
+  description: "Wooden activity cubes of different format shapes with numbers and figures."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/238704593_luvbcq.webp", Offer.last)
@@ -198,12 +206,12 @@ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%2
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Curious George Set of Illustrated Books",
+  item_name: "Children's Books",
   rate: "300",
   rating: "4",
-  address: "Kitakyushu, Fukuoka",
+  address: "Ueno, Tokyo",
   category: "Books",
-  description: "3 image books from Curious George."
+  description: "A set of 3 image books from Curious George."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%20Loop/81YtnZl2buL_dswfbh.jpg", Offer.last)
