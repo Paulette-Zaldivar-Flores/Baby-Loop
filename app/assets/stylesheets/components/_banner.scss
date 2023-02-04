@@ -30,9 +30,9 @@
 }
 
   .banner-button, .a {
-  padding: 15px 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
   background: #6667AA;
-  border-radius: 3px;
   color: white;
   font-weight: bold;
   font-size:16px;
@@ -43,4 +43,8 @@
 
   .banner-button:hover{
     background:#7172ad;
+  }
+
+  .banner-button{
+    vertical-align: top;
   }
