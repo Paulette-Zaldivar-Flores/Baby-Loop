@@ -34,11 +34,10 @@
           </div>
           <div class = "col">
             <ul class="card-text">
-              <li class = "margin-li"><i class="fas fa-baby"></i> <%= offer.category %></li>
-              <li class = "margin-li"><i class="fas fa-yen-sign"></i>
- <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
-              <li class = "margin-li"><i class="fas fa-comment"></i> <%= offer.description[0..45] %> </li>
-              <li class = "margin-li"><i class="fas fa-map-marker-alt"></i> <%= offer.address %> </li>
+              <li class = "margin-li">Category: <%= offer.category %></li>
+              <li class = "margin-li">Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
+              <li class = "margin-li">Description: <%= offer.description[0..45] %> </li>
+              <li class = "margin-li">Address: <%= offer.address %> </li>
               <br>
             </ul>
             <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
