@@ -13,7 +13,7 @@
                 <% if request.offer.photo.key.present? %>
                   <%= cl_image_tag request.offer.photo.key, height: 150, width: 250, crop: :fill %>
                 <% end %>
-              <ul class="card-text">
+              <ul class="card-text mt-3">
               <% if request.start_date  %>
                 <li>Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: '¥', precision: 0 }) %></li>
                 <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
