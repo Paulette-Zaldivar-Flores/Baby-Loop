@@ -2,16 +2,37 @@
   background:#6667AA;
   color: white;
   font-size:20px;
-  padding: 35px;
-  padding-left: 120px;
+  padding: 25px;
+  padding-left: 80px;
   font-family:'Jost', sans-serif;
-  height: 200px;
+  height: 400px;
 
   .h1{
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 
+.info-card{
+  background:#6667AA;
+  border: none;
+  margin-top: 25px;
+
+  .title{
+    text-align:center;
+  }
+}
+
+.info-card-text{
+  padding-left: 80px;
+  padding-right:80px;
+}
+
+.svg-image{
+  height: 40px;
+  width: 40px;
+  color:azure;
+  margin: 0 auto;
+}
 
 
 .carousel-products{
