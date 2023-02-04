@@ -43,43 +43,43 @@ Offer.create!(
   description: "A cute white crib made out of oak wood."
   # "v1674729874/Baby Loop/crib_uo9z70.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729874/Baby%20Loop/crib_uo9z70.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1674729874/Baby%20Loop/crib_uo9z70.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Red Car",
+  item_name: "Red Cars",
   rate: "50",
   rating: "4",
   address: "Miyamae, Kanagawa",
   category: "Toys",
-  description: "A cute little car, suitable for children from age 4."
+  description: "A set of 5 little cars, suitable for children from age 4."
   # picture_url: "v1674729870/Baby Loop/car_e7ztnb.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729870/Baby%20Loop/car_e7ztnb.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_90,w_200/v1674729870/Baby%20Loop/car_e7ztnb.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Yellow Duck",
+  item_name: "10 Yellow Ducks",
   rate: "10",
   rating: "2",
   address: "Setagaya, Tokyo",
   category: "Toys",
-  description: "A little yellow rubber duck, great for bathtime."
+  description: "10 little yellow rubber duck, great for bathtime."
   # picture_url: "v1674729866/Baby Loop/duck_t23ohe.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%20Loop/duck_t23ohe.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1674729866/Baby%20Loop/duck_t23ohe.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
-  item_name: "Wooden Horse",
+  item_name: "Wooden Horses",
   rate: "500",
   rating: "2",
   address: "Bunkyo, Tokyo",
   category: "Toys",
-  description: "A horse made out of oak wood."
+  description: "Two horses made out of oak wood."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1674729866/Baby%20Loop/horse_gsh1pc.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1674729866/Baby%20Loop/horse_gsh1pc.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -88,10 +88,10 @@ Offer.create!(
   rating: "5",
   address: "Shinjuku, Tokyo",
   category: "Accessories and goods",
-  description: "A todler car seat to enjoy your trips with your family."
+  description: "A toddler car seat to enjoy your trips with your family. Adjustable harness and headrest height. Machine washable."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114234/Baby%20Loop/pexels-erik-mclean-7708639_imb8ut.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114234/Baby%20Loop/pexels-erik-mclean-7708639_imb8ut.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -103,7 +103,7 @@ Offer.create!(
   description: "Portable toddler booster seat for dining table with dishwasher safe tray."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%20Loop/717zYbdvbxL._SL1500__jtbjcb.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114226/Baby%20Loop/717zYbdvbxL._SL1500__jtbjcb.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -115,7 +115,7 @@ Offer.create!(
   description: "80cm, snow gear with protection to keep your baby warm."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114227/Baby%20Loop/pexels-enrique-hoyos-11258764_u14r66.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114227/Baby%20Loop/pexels-enrique-hoyos-11258764_u14r66.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -127,7 +127,7 @@ Offer.create!(
   description: "80cm unissex jacket, from the popular youtube show Shinapushyu."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114493/Baby%20Loop/jpgoods_18_344244.jpg_bcqtks.webp", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114493/Baby%20Loop/jpgoods_18_344244.jpg_bcqtks.webp", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -136,10 +136,10 @@ Offer.create!(
   rating: "4",
   address: "Hamamatsu, Shizuoka",
   category: "Accessories and goods",
-  description: "3-wheel stroller,  designed to tackle all types of surfaces."
+  description: "3-wheel stroller, designed to tackle all types of surfaces."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%20Loop/814p-Q7eNDL._AC_SL1500__mauywj.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114226/Baby%20Loop/814p-Q7eNDL._AC_SL1500__mauywj.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -151,7 +151,7 @@ Offer.create!(
   description: "Easy to assembly and fold, you can have an Anpanman-themed park at your own place!"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114226/Baby%20Loop/71EgDFGdADL._AC_SL1500__q5kp1h.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114226/Baby%20Loop/71EgDFGdADL._AC_SL1500__q5kp1h.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -163,7 +163,7 @@ Offer.create!(
   description: "Portable piano and musical set with the popular Anpanman songs."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%20Loop/81OnSryq6EL._AC_SL1500_-2_sz5sxg.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114224/Baby%20Loop/81OnSryq6EL._AC_SL1500_-2_sz5sxg.jpg", Offer.last)
 
 Offer.create!(
   user: User.all.sample,
@@ -172,10 +172,10 @@ Offer.create!(
   rating: "5",
   address: "Ikebukuro, Tokyo",
   category: "Accessories and goods",
-  description: "A Miffy-themed baby bathtub for children from age 0 to one and a half years."
+  description: "A Miffy-themed baby bathtub for children from age 0 to one and a half years. Contoured infant seat with cozy padded seat back helps keep your baby from slipping and sliding. Fits in the tub and most sinks."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/71_Z-4p1x1L._AC_SL1500__iitjos.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/71_Z-4p1x1L._AC_SL1500__iitjos.jpg", Offer.last)
 
 
 Offer.create!(
@@ -188,7 +188,7 @@ Offer.create!(
   description: "Comfortable baby carrier with different types of adjustments."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%20Loop/61jmxdLgvyL._AC_SL1000__sz5tx1.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114224/Baby%20Loop/61jmxdLgvyL._AC_SL1000__sz5tx1.jpg", Offer.last)
 
 
 Offer.create!(
@@ -201,7 +201,7 @@ Offer.create!(
   description: "Wooden activity cubes of different format shapes with numbers and figures."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/238704593_luvbcq.webp", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/238704593_luvbcq.webp", Offer.last)
 
 
 Offer.create!(
@@ -214,7 +214,7 @@ Offer.create!(
   description: "A set of 3 image books from Curious George."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114224/Baby%20Loop/81YtnZl2buL_dswfbh.jpg", Offer.last)
+grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114224/Baby%20Loop/81YtnZl2buL_dswfbh.jpg", Offer.last)
 
 
 Offer.create!(
@@ -224,9 +224,9 @@ Offer.create!(
   rating: "3",
   address: "Toshima, Tokyo",
   category: "Accessories and goods",
-  description: "120 x 160cm Baby playmat."
+  description: "120 x 160cm Baby playmat. The ultra-plush mat creates a comfy and safe play space for baby. Includes 6 removable activity toys. Folds in two with handles for easy transport."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
-grab_image("https://res.cloudinary.com/djteaofzf/image/upload/v1675114223/Baby%20Loop/239868725_rul77v.webp", Offer.last)
+ grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/239868725_rul77v.jpg", Offer.last)
 
 puts "Finished!"

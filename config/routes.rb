@@ -12,8 +12,6 @@ Rails.application.routes.draw do
 
   resources :requests, only: :index
 
-  get "/my-offers", to: "offers#my_offers"
-
   namespace :lessor do
     resources :requests, only: %i[index update]
     # equivalent to => get '/<namespace>/bookings', to: '<namespace>/bookings#index'

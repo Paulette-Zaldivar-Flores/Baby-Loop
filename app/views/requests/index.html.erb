@@ -5,26 +5,25 @@
       <p>You haven't made any requests yet.</p>
     <% else %>
   </div>
-    <% @requests&.each do |request| %>
-
-    <div class = "col d-flex justify-content-center">
-      <div class="card w-50 shadow p-3  mb-3 offers-rental-card">
-        <div class="card-body">
-          <h5 class="card-title"><%= request.offer.item_name %></h5>
-          <%# <% if request&.photo&.key %>
-            <%# <%= cl_image_tag request.photo.key, height: 150, width: 250, crop: :fill %>
-            <%# <% end %>
-            <%# </div> %>
-          <ul class="card-text">
-            <li>Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: '¥', precision: 0 }) %></li>
-            <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
-            <li>Status: <%= request.status %></li>
-          </ul>
-          <%# <a href="#" class="button-accept">Accept</a>
-          <a href="#" class="button-decline">Decline</a> %>
+      <% @requests&.each do |request| %>
+        <div class = "col d-flex justify-content-center">
+          <div class="card w-50 shadow p-3  mb-3 offers-rental-card">
+            <div class="card-body">
+              <h5 class="card-title"><%= request.offer.item_name %></h5>
+                <% if request.offer.photo.key.present? %>
+                  <%= cl_image_tag request.offer.photo.key, height: 150, width: 250, crop: :fill %>
+                <% end %>
+              <ul class="card-text">
+              <% if request.start_date  %>
+                <li>Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: '¥', precision: 0 }) %></li>
+                <li>Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
+                <% end %>
+                <li>Status: <%= request.status %></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
