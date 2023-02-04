@@ -42,7 +42,7 @@
 
 .product-card{
 background:#f5f2e1;
-height: 350px;
+height: 360px;
 }
 
 .product-card:hover {
@@ -61,6 +61,18 @@ border-width: 2px;
   text-align: left;
   color: black;
 
+}
+
+.address-price {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+}
+
+.price{
+  margin-left: 60px;
+  font-size: 13px;
 }
 
 .home-page-product{
