@@ -47,11 +47,11 @@ class OffersController < ApplicationController
 
   def update
     authorize @offer
-    if @offer.update(offer_params)
-      redirect_to offer_path(@offer), notice: "Offer was successfully updated"
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    @offer.update(offer_params)
+    redirect_to new_offer_path, notice: "Offer was successfully updated"
+    # else
+      # render :edit, status: :unprocessable_entity
+    # end
   end
 
   def destroy

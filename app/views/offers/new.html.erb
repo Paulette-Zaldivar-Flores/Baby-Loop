@@ -9,7 +9,7 @@
         <%= f.input :rate %>
         <%= f.input :address %>
         <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: "button" %>
+        <%= f.button :submit, "Submit my offer", class: "button" %>
       <% end %>
     </div>
   </div>
@@ -36,20 +36,16 @@
             <ul class="card-text">
               <li class = "margin-li">Category: <%= offer.category %></li>
               <li class = "margin-li">Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
-              <li class = "margin-li">Description: <%= offer.description %> </li>
+              <li class = "margin-li">Description: <%= offer.description[0..45] %> </li>
               <li class = "margin-li">Address: <%= offer.address %> </li>
               <br>
             </ul>
             <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-            <a href=new_offer_path class="button-edit">Edit</a>
+            <%= link_to "Edit", edit_offer_path(offer), class: "button-edit"  %>
           </div>
-
         </div>
       </div>
     </div>
     <% end %>
   <% end %>
-</div>
-</div>
-</div>
 </div>
