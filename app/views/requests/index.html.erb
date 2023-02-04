@@ -5,13 +5,14 @@
       <p>You haven't made any requests yet.</p>
     <% else %>
   </div>
+       <div class="cardwrapper">
       <% @requests&.each do |request| %>
         <div class = "col d-flex justify-content-center">
-          <div class="card w-50 shadow p-3  mb-3 offers-rental-card">
+          <div class="card shadow p-3  mb-3 offers-rental-card">
             <div class="card-body">
               <h5 class="card-title"><%= request.offer.item_name %></h5>
                 <% if request.offer.photo.key.present? %>
-                  <%= cl_image_tag request.offer.photo.key, height: 150, width: 250, crop: :fill %>
+                  <%= cl_image_tag request.offer.photo.key, height: 350, width: 450, crop: :fill %>
                 <% end %>
               <ul class="card-text">
               <% if request.start_date  %>
@@ -24,6 +25,7 @@
           </div>
         </div>
       <% end %>
+      </div>
     <% end %>
   </div>
 </div>
