@@ -22,8 +22,15 @@
 
 .offers-rental-card{
   background: #f8eaf8;
-  width: 540px;
   margin: 0 auto;
+
+  img {
+    width: 80%;
+    height: 50%;
+    margin-bottom: 16px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
 
 .rental-requests-card{
@@ -100,4 +107,9 @@ margin: 0 auto;
 
 .lessors-card .card-text{
   text-align: left;
+}
+
+.cardwrapper {
+  display:flex;
+  flex-wrap: wrap;
 }

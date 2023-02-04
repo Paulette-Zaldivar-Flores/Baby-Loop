@@ -2,34 +2,34 @@
   <h1 class = "text-center products-page-title mt-5">My requests and offers</h1>
   <div class = "col justify-content-center">
 
+
     <% @requests_per_offer.each do |offer, requests| %>
+      <% unless requests.all? { |request| request.status == "rejected" } %>
         <div class = "text-center mt-5">
           <%= offer.item_name %>
         </div>
-
-          <% requests.each do |request| %>
-          <div class="w-80 shadow p-3  mb-5 mt-3 lessors-card">
-            <% unless request.status == "rejected" %>
-              <%= request.user.first_name %>
-              <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %>
-              <%= request.status %>
-              <% end %>
-                <div class="d-flex">
-                  <% if request.status == "pending" %>
-                    <%= simple_form_for [:lessor, request] do |f| %>
-                      <%= f.input :status, as: :hidden, input_html: { value: "accepted" } %>
-                      <%= f.submit "Accept", class: "btn btn-info mx-3" %>
-                    <% end %>
-                    <%= simple_form_for [:lessor, request] do |f| %>
-                      <%= f.input :status, as: :hidden, input_html: { value: "rejected" } %>
-                      <%= f.submit "Reject", class: "btn btn-light" %>
-                    <% end %>
-                  <% end %>
-              </div>
-               </div>
-          <% end %>
-
       <% end %>
-
+      <% requests.each do |request| %>
+        <% unless request.status == "rejected" %>
+          <div class="shadow p-3  mb-5 mt-3 lessors-card">
+            <%= request.user.first_name %>
+            <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %>
+            <%= request.status %>
+          <% if request.status == "pending" %>
+              <div class="d-flex">
+                <%= simple_form_for [:lessor, request] do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: "accepted" } %>
+                  <%= f.submit "Accept", class: "btn btn-info mx-3" %>
+                <% end %>
+                <%= simple_form_for [:lessor, request] do |f| %>
+                  <%= f.input :status, as: :hidden, input_html: { value: "rejected" } %>
+                  <%= f.submit "Reject", class: "btn btn-light" %>
+                <% end %>
+              </div>
+          <% end %>
+            </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
