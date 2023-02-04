@@ -21,9 +21,16 @@
 }
 
 .offers-rental-card{
-  background: #bacaea;
+  background: #f8eaf8;
   width: 540px;
   margin: 0 auto;
+}
+
+.rental-requests-card{
+  background: #b1cddc;
+  width: 540px;
+  margin: 0 auto;
+
 }
 
 .offers-in-row{
@@ -93,8 +100,4 @@ margin: 0 auto;
 
 .lessors-card .card-text{
   text-align: left;
-}
-
-.card-text-rental{
-  font-size: 16px;
 }
