@@ -5,9 +5,9 @@
 
     <% @requests_per_offer.each do |offer, requests| %>
       <% unless requests.all? { |request| request.status == "rejected" } %>
-      <div class = "text-center mt-5">
-        <%= offer.item_name %>
-      </div>
+        <div class = "text-center mt-5">
+          <%= offer.item_name %>
+        </div>
       <% end %>
       <% requests.each do |request| %>
         <% unless request.status == "rejected" %>
@@ -26,8 +26,8 @@
                   <%= f.submit "Reject", class: "btn btn-light" %>
                 <% end %>
               </div>
-            </div>
           <% end %>
+            </div>
         <% end %>
       <% end %>
     <% end %>
