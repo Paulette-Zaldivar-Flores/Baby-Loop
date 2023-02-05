@@ -2,11 +2,13 @@
   <div class="row">
     <div class="col md-6 text-center">
       <h2 class= "offers-title"><%= @offer.item_name %></h2>
+      <div class="bg-image hover-zoom ripple rounded ripple-surface">
       <% if @offer.photo.attached? %>
-        <%= cl_image_tag @offer.photo.key, class: "offers-image", height: 250, width: 200 %>
+        <%= cl_image_tag @offer.photo.key, height: 200, width: 200 %>
       <% else %>
         <%= image_tag "blockset.jpg", class: "offers-image", height: 250, width: 200 %>
       <% end %>
+      </div>
       <div class = "offers-text">
       <ul>
       <li>Category: <%= @offer.category %></li>
