@@ -21,8 +21,7 @@
 }
 
 .offers-rental-card{
-  background: #d0f2d2;
-  width: 500px;
+  background: #f8eaf8;
   margin: 0 auto;
 
   img {
@@ -32,6 +31,18 @@
     object-fit: cover;
     object-position: 50% 50%;
   }
+}
+
+.rental-requests-card{
+  background: #b1cddc;
+  width: 540px;
+  margin: 0 auto;
+
+}
+
+.offers-in-row{
+  display: flex;
+  flex: wrap;
 }
 
 .offers-rental-card .card-text{
