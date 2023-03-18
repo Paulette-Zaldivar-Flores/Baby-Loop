@@ -55,11 +55,16 @@
 <ul>
   <li>Upload an offer</li>
   <li> Make an offer</li>
-  <li>Accept and offer</li></ul>
+  <li>Accept an offer</li>
+  <li>Reject an offer</li></ul>
 
 
 
 ## Screenshots
+
+
+
+https://user-images.githubusercontent.com/96970580/226087077-cb6b5de8-0811-40a8-bf6c-b721ff64ec46.mov
 
 
 
