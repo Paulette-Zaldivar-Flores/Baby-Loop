@@ -1,8 +1,9 @@
 .background {
   background-color: #6667AA;
   border: none;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  margin: auto;
 }
 
 .product{
@@ -105,9 +106,4 @@ margin: 0 auto;
 .cardwrapper {
   display:flex;
   flex-wrap: wrap;
-}
-
-
-.card-body{
-  text-align: center;
 }
