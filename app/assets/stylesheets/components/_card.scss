@@ -1,8 +1,9 @@
 .background {
   background-color: #6667AA;
   border: none;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  margin: auto;
 }
 
 .product{
@@ -18,6 +19,7 @@
 
 .card-image-top{
   border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.277) 0px 8px 24px;
 }
 
 .offers-rental-card{
