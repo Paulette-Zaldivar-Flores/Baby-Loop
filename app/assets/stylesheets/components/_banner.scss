@@ -4,11 +4,13 @@
 // }
 
 .banner {
+  filter: brightness(80%);
+  width: 100%;
   background-size: cover;
   background-position: center;
   padding: 300px 0;
   display: flex;
-  background-position: 0px 60px;
+  // background-position: 0px 60px;
   justify-content: center;
   align-items: center;
 
@@ -20,6 +22,7 @@
   left: 50px;
   font-family: 'Jost', sans-serif;
   top: 40%;
+  text-shadow: 1px 1px #ffffff;
 }
 
 .banner p{
@@ -47,4 +50,10 @@
 
   .banner-button{
     vertical-align: top;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .banner {
+      padding: 200px 0;
+    }
   }
