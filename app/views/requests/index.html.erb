@@ -1,12 +1,12 @@
-<h1 class = "text-center rental-title mb-3 mt-3 request" id = "rental-requests">Rental Requests</h1>
+<h1 class = "text-center rental-title mb-3 mt-3 request" id = "rental-requests">Outgoing Requests</h1>
 <%# <div class = "my-offers"> %>
-  <div class="text-center">
-    <% if @requests.empty? %>
-      <p>You haven't made any requests yet.</p>
-    <% else %>
+<div class="text-center">
+  <% if @requests.empty? %>
+    <p>You haven't made any requests yet.</p>
+  <% else %>
   </div>
-   <section>
-     <% @requests&.each do |request| %>
+  <section>
+    <% @requests&.each do |request| %>
       <div class="container py-3">
         <div class="row d-flex mb-3 justify-content-center">
           <div class="col-md-12 col-xl-10">
@@ -17,9 +17,9 @@
                     <div
                       class="bg-image hover-zoom ripple rounded ripple-surface"
                     >
-                    <% if request.offer.photo.key.present? %>
-                  <%= cl_image_tag request.offer.photo.key, height: 200, width: 200 %>
-                <% end %>
+                      <% if request.offer.photo.key.present? %>
+                        <%= cl_image_tag request.offer.photo.key, height: 200, width: 200 %>
+                      <% end %>
                     </div>
                   </div>
                   <div
@@ -27,18 +27,18 @@
                     <ul class="text-truncate mb-4 mb-md-0">
                       <h5><%= request.offer.item_name %></h5>
                       <% if request.start_date %>
-                <li class = "margin-li">Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: "¥", precision: 0 }) %></li>
-                <li class = "margin-li">Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
-                <% end %>
-                <li>Status: <%= request.status %></li>
-              </ul>
+                        <li class = "margin-li">Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: "¥", precision: 0 }) %></li>
+                        <li class = "margin-li">Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
+                      <% end %>
+                      <li>Status: <%= request.status %></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          </div>
-          <% end %>
-          <% end %>
-      </div>
+        <% end %>
+      <% end %>
     </div>
+  </div>
 </section>
