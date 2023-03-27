@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BABYStuff</title>
+    <title>Baby Loop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,14 +11,15 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
   </head>
-
   <body>
-  <% if user_signed_in? %>
- <% end %>
-   <%= render "shared/navbar" %>
-    <p class="alert"><%= alert %></p>
+    <% if user_signed_in? %>
+    <% end %>
+    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <%= yield %>
-     <%= render "shared/footer" %>
+    <p class="alert"><%= alert %></p>
+    <div class = "content">
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>
