@@ -11,17 +11,28 @@
 @import "components/index";
 @import "pages/index";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container {
-  width: 900px;
-  margin: 0 auto;
 
+
+html, body{
+  height: 100% !important;
+  width: 100% !important;
 }
 
 body{
   background:#ffffff;
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
+.content{
+  flex: 1 0 auto;
 }
 
 a{

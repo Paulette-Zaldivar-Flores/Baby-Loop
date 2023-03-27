@@ -1,88 +1,80 @@
-<div class="banner position-relative" style="background-image: url('<%= path_to_image("banner_babyloop.png") %>')">
+<div class="banner" style="background-image: url('<%= path_to_image("banner_babyloop.png") %>')">
   <div class="container">
     <h1>Rent With Us</h1>
     <p>Baby Gear and More</p>
     <%= link_to "Rent Now", offers_path, class: "banner-button" %>
-    </div>
   </div>
 </div>
-
 <div class = "our-products">
   <h1>How It Works</h1>
-    <%# <p>We deliver boxes of fantastic, clothes, furniture items and toys hand picked by you!</p> %>
-    <div class="row centered">
+  <%# <p>We deliver boxes of fantastic, clothes, furniture items and toys hand picked by you!</p> %>
+  <div class="row centered">
     <div class = "col">
       <div class="card info-card">
-       <%= image_tag "choose.svg", class: "svg-image" %>
-      <h4 class = "title">Choose</h4>
-      <p class = "info-card-text">First choose the items you would like to order. Approval for rentals are super fast.</p>
-    </div>
-    </div>
-    <div class = "col">
-    <div class="card info-card">
-       <%= image_tag "enjoy.svg", class: "svg-image" %>
-      <h4 class = "title">Enjoy</h4>
-      <p class = "info-card-text">Worry-free, enjoy your items. Changed your mind? Feel free to return it.</p>
-    </div>
+        <%= image_tag "choose.svg", class: "svg-image" %>
+        <h4 class = "title">Choose</h4>
+        <p class = "info-card-text">First choose the items you would like to order. Approval for rentals are super fast.</p>
+      </div>
     </div>
     <div class = "col">
-  <div class="card info-card">
-      <%= image_tag "reorder.svg", class: "svg-image" %>
-    <h4 class = "title" >Switch</h4>
-    <p class = "info-card-text">Return your items and order new ones.Use your items for as long as two months.</p>
-  </div>
+      <div class="card info-card">
+        <%= image_tag "enjoy.svg", class: "svg-image" %>
+        <h4 class = "title">Enjoy</h4>
+        <p class = "info-card-text">Worry-free, enjoy your items. Changed your mind? Feel free to return it.</p>
+      </div>
+    </div>
+    <div class = "col">
+      <div class="card info-card">
+        <%= image_tag "reorder.svg", class: "svg-image" %>
+        <h4 class = "title" >Switch</h4>
+        <p class = "info-card-text">Return your items and order new ones.Use your items for as long as two months.</p>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-
-
-
 <div class = "rent-now-midsection">
   <h1 class = "mid-section-title">RENT NOW...</h1>
 </div>
-
 <div class="row centered">
-    <div class="col">
-  <%= image_tag "crib.jpg", class: "main-page-product" %></div>
-    <div class="col mid-button">  <%= link_to "Rent Now", offers_path, class: "button" %></div>
+  <div class="col">
+    <%= image_tag "crib.jpg", class: "main-page-product" %></div>
+  <div class="col mid-button">  <%= link_to "Rent Now", offers_path, class: "button" %></div>
 </div>
-
 <div class = "carousel-products">
-<div class="row row-cols-12 row-cols-md-4">
-  <% @offers.each do |offer| %>
-    <%= link_to offer_path(offer) do %>
-    <div class = "col">
-        <div class="card background">
-          <% if offer.photo.attached? %>
-            <%= cl_image_tag offer.photo.key, class: "card-image-top", height: 200, width: 200 %>
-          <% else %>
-          <%= image_tag "blockset.jpg", class: "card-image-top" %>
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title product"><%= offer.item_name %></h5>
-            <p class="card-text product-text"> <%= number_to_currency(offer.rate, {unit: '¥', precision: 0}) %>/day</p>
+  <div class="row row-cols-12 row-cols-md-4">
+    <% @offers.each do |offer| %>
+      <%= link_to offer_path(offer) do %>
+        <div class = "col">
+          <div class="card background">
+            <% if offer.photo.attached? %>
+              <%= cl_image_tag offer.photo.key, class: "card-image-top", height: 200, width: 200 %>
+            <% else %>
+              <%= image_tag "blockset.jpg", class: "card-image-top" %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title product"><%= offer.item_name %></h5>
+              <p class="card-text product-text"> <%= number_to_currency(offer.rate, {unit: '¥', precision: 0}) %>/day</p>
             </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
 </div>
-
 <h1 class = "baby-section-title">BABY LOOP...</h1>
-  <div class="row centered row-cols-md-3">
-    <div class = "col">
-      <ul >
-        <li class = "categories">Baby & Toddler Toys</li>
-        <li class = "categories">Building Toys</li>
-        <li class = "categories">Arts & Crafts Toy</li>
-        <li class = "categories">Nursery Furniture</li>
-        <li class = "categories">Clothes</li>
-        <li class = "categories">Shoes</li>
-      </ul>
+<div class="row centered row-cols-md-3">
+  <div class = "col">
+    <ul >
+      <li class = "categories">Baby & Toddler Toys</li>
+      <li class = "categories">Building Toys</li>
+      <li class = "categories">Arts & Crafts Toy</li>
+      <li class = "categories">Nursery Furniture</li>
+      <li class = "categories">Clothes</li>
+      <li class = "categories">Shoes</li>
+    </ul>
     <%= link_to "View More", offers_path, class: "button view-more-button" %>
   </div>
-<div class="col">
-  <%= image_tag "duck.jpg", class: "categories-product" %>
+  <div class="col">
+    <%= image_tag "duck.jpg", class: "categories-product" %>
   </div>
 </div>
