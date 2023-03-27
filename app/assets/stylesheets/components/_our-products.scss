@@ -71,3 +71,26 @@
 .products-page-title{
   color: #6667AA;
 }
+
+@media only screen and (max-width: 600px) {
+  .our-products {
+    height: auto;
+    padding: 25px;
+
+  .products-title{
+      text-align: center;
+    }
+  }
+
+  .info-card{
+    height: auto;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .info-card-text{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+}
