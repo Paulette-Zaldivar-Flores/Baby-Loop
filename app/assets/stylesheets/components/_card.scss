@@ -18,6 +18,7 @@
 
 .card-image-top{
   border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.277) 0px 8px 24px;
 }
 
 .offers-rental-card{
@@ -104,4 +105,9 @@ margin: 0 auto;
 .cardwrapper {
   display:flex;
   flex-wrap: wrap;
+}
+
+
+.card-body{
+  text-align: center;
 }
