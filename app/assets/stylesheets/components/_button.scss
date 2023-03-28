@@ -11,10 +11,12 @@
   color: white;
   font-weight: bold;
   font-size:16px;
+  box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
 }
 
   .button:hover{
-    background:#7172ad;
+    background:#404279;
     color: white;
   }
 

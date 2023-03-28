@@ -1,46 +1,42 @@
-// .banner img{
-//   height: 600px;
-//   width: 100%;
-// }
+.banner img{
+  filter: brightness(80%);
+  width: 100%;
+}
 
 .banner {
-  filter: brightness(80%);
+  position: relative; /* Added */
   width: 100%;
   background-size: cover;
   background-position: center;
   padding: 300px 0;
   display: flex;
-  // background-position: 0px 60px;
   justify-content: center;
   align-items: center;
-
 }
 
-.banner h1{
+.banner h1 {
   font-size: 100px;
   top: 30%;
-}
 
-.banner p{
-  font-size: 50px;
-}
-
-.banner h1, .banner p {
-  color: #fafafa;
   position: absolute;
+  color: #fafafa;
   margin-left: 50px;
   font-family: 'Jost', sans-serif;
   text-shadow: 3px 3px #585454;
 }
 
-.banner p{
+.banner p {
+  font-size: 50px;
   color: #fefefe;
-  position: absolute;
   top: 50%;
+
+  position: absolute;
+  margin-left: 50px;
+  text-shadow: 3px 3px #585454;
 }
 
-  .banner-button, .a {
-  padding: 15px 25px;
+.banner-button, .a {
+  padding: 15px 30px;
   border-radius: 50px;
   background: #ffffffa4;
   color:#6667AA;
@@ -49,45 +45,35 @@
   position: absolute;
   top: 65%;
   margin-left: 50px;
-    }
+  border: 2px solid #6667AA;
+}
 
+.banner-button:hover{
+  background:#9d9dd4;
+}
 
-  .banner-button:hover{
-    background:#9d9dd4;
+.banner-button{
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner h1 {
+    font-size: 50px;
+    text-align: center;
+    top: 25%;
+    margin-left: 45px;
   }
-
-  .banner-button{
-    vertical-align: top;
+  .banner p {
+    font-size: 25px;
+    text-align: center;
+    top: 35%;
+    margin-left: 60px;
   }
-
-  @media only screen and (max-width: 600px) {
-
-
-    .banner h1{
-      font-size: 50px;
-      text-align: center;
-      top: 30%;
-
-
-    }
-
-    .banner p{
-      font-size: 25px;
-      text-align: center;
-      top: 40%;
-      left: 10%;
-
-
-    }
-
-    .banner-button, .a{
-      text-align: center;
-      top:50%;
-      width: 80%;
-      margin: 0;
-      left: 10%;
-
-    }
-
-
+  .banner-button, .a {
+    text-align: center;
+    top:50%;
+    width: 80%;
+    margin: 0;
+    left: 10%;
   }
+}

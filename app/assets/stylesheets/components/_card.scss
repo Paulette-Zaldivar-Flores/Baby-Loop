@@ -19,7 +19,6 @@
 
 .card-image-top{
   border-radius: 5px;
-  box-shadow: rgba(255, 255, 255, 0.277) 0px 8px 24px;
 }
 
 .offers-rental-card{
@@ -106,4 +105,45 @@ margin: 0 auto;
 .cardwrapper {
   display:flex;
   flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .offers-rental-card {
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  }
+
+  .offers-rental-card .bg-image {
+  margin: 0 auto 1rem auto;
+  margin-left: 60px;
+  }
+
+  .offers-rental-card .card-title {
+  font-size: 20px;
+  margin: 0.5rem auto;
+  text-align: center;
+  margin-right:30px;
+  }
+
+  .offers-rental-card .text-truncate {
+  margin-bottom: 0;
+  }
+
+  .offers-rental-card li {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  margin-right:30px;
+  }
+
+  .offers-rental-card .button-decline {
+
+  margin-left: 20px;
+  }
+
+  .offers-rental-card .button-edit {
+
+  margin-left:15px;
+  }
 }
