@@ -16,36 +16,44 @@
 
 }
 
-.banner h1, .banner p {
-  color: #6667AA;
-  position: absolute;
-  left: 50px;
-  font-family: 'Jost', sans-serif;
-  top: 40%;
-  text-shadow: 1px 1px #ffffff;
+.banner h1{
+  font-size: 100px;
+  top: 30%;
 }
 
 .banner p{
-  color: black;
+  font-size: 50px;
+}
+
+.banner h1, .banner p {
+  color: #fafafa;
+  position: absolute;
+  margin-left: 50px;
+  font-family: 'Jost', sans-serif;
+  text-shadow: 3px 3px #585454;
+}
+
+.banner p{
+  color: #fefefe;
   position: absolute;
   top: 50%;
-  left: 50px;
 }
 
   .banner-button, .a {
   padding: 15px 25px;
   border-radius: 50px;
-  background: #6667AA;
-  color: white;
+  background: #ffffffa4;
+  color:#6667AA;
   font-weight: bold;
-  font-size:16px;
+  font-size:20px;
   position: absolute;
   top: 65%;
-  left: 50px;
+  margin-left: 50px;
     }
 
+
   .banner-button:hover{
-    background:#7172ad;
+    background:#9d9dd4;
   }
 
   .banner-button{
@@ -53,7 +61,33 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .banner {
-      padding: 200px 0;
+
+
+    .banner h1{
+      font-size: 50px;
+      text-align: center;
+      top: 30%;
+
+
     }
+
+    .banner p{
+      font-size: 25px;
+      text-align: center;
+      top: 40%;
+      left: 10%;
+
+
+    }
+
+    .banner-button, .a{
+      text-align: center;
+      top:50%;
+      width: 80%;
+      margin: 0;
+      left: 10%;
+
+    }
+
+
   }
