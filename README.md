@@ -1,5 +1,5 @@
 # Baby Loop 👶🏼
-<p> A web page that allows you to rent and rent out baby products.</p>
+<p> An ecommerce app web page that allows you to rent and rent out baby products.</p>
  Live demo(https://baby-loop.herokuapp.com/).
 
 
@@ -53,8 +53,9 @@
 
 ## Features
 <ul>
-  <li>Upload an offer</li>
   <li> Make an offer</li>
+  <li>Edit your offer</li>
+  <li>Delete your offer</li>
   <li>Accept an offer</li>
   <li>Reject an offer</li></ul>
 
@@ -62,9 +63,9 @@
 
 ## Screenshots
 
+<img width="1269" alt="Screen Shot 2566-03-28 at 09 13 54" src="https://user-images.githubusercontent.com/96970580/228553640-308ddd56-596d-4c1c-a61f-d390116a86a6.png">
 
 
-https://user-images.githubusercontent.com/96970580/226087077-cb6b5de8-0811-40a8-bf6c-b721ff64ec46.mov
 
 
 
