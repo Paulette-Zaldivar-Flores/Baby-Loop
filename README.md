@@ -1,6 +1,7 @@
 # Baby Loop 👶🏼
-<p> An ecommerce app web page that allows you to rent and rent out baby products.</p>
- Live demo(https://baby-loop.herokuapp.com/).
+> An ecommerce app web that allows you to rent and rent out baby products. 
+> Live demo [_here_](https://baby-loop.herokuapp.com/).
+
 
 
 
