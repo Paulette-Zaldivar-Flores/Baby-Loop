@@ -47,9 +47,9 @@
         <div class = "col">
           <div class="card background">
             <% if offer.photo.attached? %>
-              <%= cl_image_tag offer.photo.key, class: "card-image-top", height: 200, width: 200 %>
+              <%= cl_image_tag offer.photo.key, class: "card-image-top carousel" %>
             <% else %>
-              <%= image_tag "blockset.jpg", class: "card-image-top" %>
+              <%= image_tag "blockset.jpg", class: "card-image-top carousel" %>
             <% end %>
             <div class="card-body">
               <h5 class="card-title product"><%= offer.item_name %></h5>
@@ -74,7 +74,7 @@
     </ul>
     <%= link_to "View More", offers_path, class: "button view-more-button" %>
   </div>
-  <div class="col">
-    <%= image_tag "duck.jpg", class: "categories-product" %>
+  <div class="col-md-6 col-sm-4 col-sm-3">
+    <%= image_tag "duck.jpg", class: "categories-product img-fluid" %>
   </div>
 </div>

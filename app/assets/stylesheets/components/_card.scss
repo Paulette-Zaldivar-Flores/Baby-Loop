@@ -21,6 +21,12 @@
   border-radius: 5px;
 }
 
+.carousel{
+  object-fit: cover;
+}
+
+
+
 .offers-rental-card{
   border-color: #ed8d2d;
   border-width: 2px;
@@ -53,7 +59,7 @@
 
 
 .product-card{
-background:#f5f2e1;
+background:#cadefc;
 height: 360px;
 }
 
@@ -138,12 +144,15 @@ margin: 0 auto;
   }
 
   .offers-rental-card .button-decline {
-
   margin-left: 20px;
   }
 
   .offers-rental-card .button-edit {
-
   margin-left:15px;
+  }
+
+  .product-card{
+    width: 70%;
+    margin: 0 auto;
   }
 }

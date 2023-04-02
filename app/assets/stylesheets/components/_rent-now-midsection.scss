@@ -16,8 +16,13 @@
   color: #6667AA;
 }
 
+.categories-product{
+  margin:30px;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .main-page-product {
-  width:100%;
   margin: 80px;
   margin-top: 60px;
   border-radius: 5px;
@@ -30,6 +35,17 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+  .categories-product{
+    width: 85%;
+  }
+
+  .baby-section-title{
+  text-align:center;
+  font-size: 80px;
+  padding: 0;
+
+  }
   .mid-section-title{
   text-align:center;
   font-size: 80px;
@@ -39,15 +55,12 @@
   .main-page-product{
     width: 85%;
     margin: 30px;
-
   }
 
   .mid-button{
     margin: 0;
     text-align: center;
     padding-bottom: 40px;
-
-
   }
 
 }
