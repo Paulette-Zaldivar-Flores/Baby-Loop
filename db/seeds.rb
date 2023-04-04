@@ -64,7 +64,7 @@ Offer.create!(
   rating: "2",
   address: "Setagaya, Tokyo",
   category: "Toys",
-  description: "10 little yellow rubber duck, great for bathtime."
+  description: "10 yellow rubber ducks, great for bathtime."
   # picture_url: "v1674729866/Baby Loop/duck_t23ohe.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1674729866/Baby%20Loop/duck_t23ohe.jpg", Offer.last)
@@ -88,7 +88,7 @@ Offer.create!(
   rating: "5",
   address: "Shinjuku, Tokyo",
   category: "Accessories and goods",
-  description: "A toddler car seat to enjoy your trips with your family. Adjustable harness and headrest height. Machine washable."
+  description: "An adjustable toddler car seat to enjoy your trips with your family."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114234/Baby%20Loop/pexels-erik-mclean-7708639_imb8ut.jpg", Offer.last)
@@ -100,7 +100,7 @@ Offer.create!(
   rating: "3",
   address: "Shibuya, Tokyo",
   category: "Furniture",
-  description: "Portable toddler booster seat for dining table with dishwasher safe tray."
+  description: "Portable toddler booster seat with dishwasher safe tray."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114226/Baby%20Loop/717zYbdvbxL._SL1500__jtbjcb.jpg", Offer.last)
@@ -148,7 +148,7 @@ Offer.create!(
   rating: "4.8",
   address: "Meguro, Tokyo",
   category: "Toys",
-  description: "Easy to assembly and fold, you can have an Anpanman-themed park at your own place!"
+  description: "Easy to assemble and fold!"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114226/Baby%20Loop/71EgDFGdADL._AC_SL1500__q5kp1h.jpg", Offer.last)
@@ -160,7 +160,7 @@ Offer.create!(
   rating: "4.3",
   address: "Minami-ku, Kyoto",
   category: "Toys",
-  description: "Portable piano and musical set with the popular Anpanman songs."
+  description: "Portable piano with popular Anpanman songs."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114224/Baby%20Loop/81OnSryq6EL._AC_SL1500_-2_sz5sxg.jpg", Offer.last)
@@ -172,7 +172,7 @@ Offer.create!(
   rating: "5",
   address: "Ikebukuro, Tokyo",
   category: "Accessories and goods",
-  description: "A Miffy-themed baby bathtub for children from age 0 to one and a half years. Contoured infant seat with cozy padded seat back helps keep your baby from slipping and sliding. Fits in the tub and most sinks."
+  description: "A Miffy-themed baby bathtub for children from age 0 to 1.5years."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/71_Z-4p1x1L._AC_SL1500__iitjos.jpg", Offer.last)
@@ -185,7 +185,7 @@ Offer.create!(
   rating: "4.9",
   address: "Takatsu, Kawasaki, Kanagawa",
   category: "Accessories and goods",
-  description: "Comfortable baby carrier with different types of adjustments."
+  description: "Comfortable baby carrier with various adjustments."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114224/Baby%20Loop/61jmxdLgvyL._AC_SL1000__sz5tx1.jpg", Offer.last)
@@ -198,7 +198,7 @@ Offer.create!(
   rating: "3",
   address: "Sapporo, Hokkaido",
   category: "Toys",
-  description: "Wooden activity cubes of different format shapes with numbers and figures."
+  description: "Wooden activity cubes with numbers and figures."
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
 grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/238704593_luvbcq.webp", Offer.last)
@@ -224,7 +224,7 @@ Offer.create!(
   rating: "3",
   address: "Toshima, Tokyo",
   category: "Accessories and goods",
-  description: "120 x 160cm Baby playmat. The ultra-plush mat creates a comfy and safe play space for baby. Includes 6 removable activity toys. Folds in two with handles for easy transport."
+  description: "120 x 160cm Baby playmat that creates a comfy and safe play space for baby"
   # picture_url: "v1674729866/Baby Loop/horse_gsh1pc.jpg"
 )
  grab_image("https://res.cloudinary.com/djteaofzf/image/upload/c_scale,h_200,q_86,w_200/v1675114223/Baby%20Loop/239868725_rul77v.jpg", Offer.last)

@@ -29,7 +29,7 @@
                 <p class = "price"> <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day</p>
               </div>
               <% if offer.rating.present? %>
-                <p class = "card-text products-text"><% offer.rating.to_i.times do %>
+                <p class = "card-text products-text">Rating:<% offer.rating.to_i.times do %>
                     <i class="fa-solid fa-star"></i>
                   <% end %></p>
               <% else %>

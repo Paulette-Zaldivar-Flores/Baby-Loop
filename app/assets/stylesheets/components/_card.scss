@@ -50,6 +50,7 @@
 
 .margin-li{
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .offer, .request{
@@ -59,8 +60,9 @@
 
 
 .product-card{
-background:#cadefc;
+background:#ffffff;
 height: 360px;
+border-radius: 10px;
 }
 
 .product-card:hover {
@@ -69,28 +71,29 @@ border-width: 2px;
 }
 
 .products-text{
-  font-size: 16px;
-  text-align: right;
+  font-size: 14px;
+  text-align: left;
   color: black;
 }
 
 .products-text-title{
   font-size: 20px;
   text-align: left;
-  color: black;
+  color: rgb(59, 40, 122);
+  font-weight: bold;
 
 }
 
 .address-price {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   color: black;
 }
 
 .price{
   margin-left: 60px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .home-page-product{
