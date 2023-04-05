@@ -61,7 +61,6 @@
 
 .product-card{
 background:#ffffff;
-height: 360px;
 border-radius: 10px;
 }
 
@@ -81,14 +80,16 @@ border-width: 2px;
   text-align: left;
   color: rgb(59, 40, 122);
   font-weight: bold;
-
 }
 
 .address-price {
-  display: flex;
-  align-items: center;
   font-size: 14px;
-  color: black;
+  color: #808080;
+}
+
+.item-name{
+  font-size: 18px;
+  color: #000000;
 }
 
 .price{

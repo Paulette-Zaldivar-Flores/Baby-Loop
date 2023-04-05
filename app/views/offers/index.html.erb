@@ -23,17 +23,17 @@
               <%= image_tag "blockset.jpg", class: "card-image-top" %>
             <% end %>
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title products-text-title"><%= offer.item_name %></h5>
+              <h5 class="products-text-title"><%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day</h5>
               <div class = "address-price">
-                <p  ><%= offer.address %></p>
-                <p class = "price"> <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day</p>
-              </div>
-              <% if offer.rating.present? %>
-                <p class = "card-text products-text">Rating:<% offer.rating.to_i.times do %>
-                    <i class="fa-solid fa-star"></i>
-                  <% end %></p>
+                <p class = "item-name"><%= offer.item_name %></p>
+                <p><%= offer.address %></p>
+                <% if offer.rating.present? %>
+                  <p>Rating:<% offer.rating.to_i.times do %>
+                      <i class="fa-solid fa-star"></i>
+                    <% end %></p>
+                </div>
               <% else %>
-                <p class = "card-text products-text">N/A</p>
+                <p>N/A</p>
               <% end %>
             </div>
           </div>
