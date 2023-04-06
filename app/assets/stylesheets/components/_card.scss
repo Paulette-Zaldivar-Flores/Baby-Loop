@@ -1,9 +1,7 @@
 .background {
   background-color: #6667AA;
   border: none;
-  height: 200px;
-  width: 200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .product{
@@ -18,12 +16,10 @@
 }
 
 .card-image-top{
-  border-radius: 5px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.carousel{
-  object-fit: cover;
-}
 
 
 
@@ -66,7 +62,7 @@ border-radius: 10px;
 
 .product-card:hover {
 border-color: #6667AA;
-border-width: 2px;
+border-width: 3px;
 }
 
 .products-text{

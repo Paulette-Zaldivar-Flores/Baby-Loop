@@ -47,9 +47,9 @@
         <div class = "col">
           <div class="card background">
             <% if offer.photo.attached? %>
-              <%= cl_image_tag offer.photo.key, class: "card-image-top carousel" %>
+              <%= cl_image_tag offer.photo.key, class: "card-image-top" %>
             <% else %>
-              <%= image_tag "blockset.jpg", class: "card-image-top carousel" %>
+              <%= image_tag "blockset.jpg", class: "card-image-top" %>
             <% end %>
             <div class="card-body">
               <h5 class="card-title product"><%= offer.item_name %></h5>

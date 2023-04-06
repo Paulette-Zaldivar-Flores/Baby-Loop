@@ -18,7 +18,7 @@
         <%= link_to offer_path(offer) do %>
           <div class="card product-card mb-3 mt-3 shadow">
             <% if offer.photo.attached? %>
-              <%= cl_image_tag offer.photo.key, class: "card-image-top products-page-image d-flex" %>
+              <%= cl_image_tag offer.photo.key, class: "card-image-top" %>
             <% else %>
               <%= image_tag "blockset.jpg", class: "card-image-top" %>
             <% end %>
