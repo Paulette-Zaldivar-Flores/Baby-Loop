@@ -15,13 +15,11 @@
   color: #eaeaa4;
 }
 
-.card-image-top{
+.card-img-top{
   object-fit: cover;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-
-
-
 
 .offers-rental-card{
   border-color: #ed8d2d;
@@ -52,45 +50,6 @@
 .offer, .request{
   color: #6667AA;
   font-weight: bold;
-}
-
-
-.product-card{
-background:#ffffff;
-border-radius: 10px;
-}
-
-.product-card:hover {
-border-color: #6667AA;
-border-width: 3px;
-}
-
-.products-text{
-  font-size: 14px;
-  text-align: left;
-  color: black;
-}
-
-.products-text-title{
-  font-size: 20px;
-  text-align: left;
-  color: rgb(59, 40, 122);
-  font-weight: bold;
-}
-
-.address-price {
-  font-size: 14px;
-  color: #808080;
-}
-
-.item-name{
-  font-size: 18px;
-  color: #000000;
-}
-
-.price{
-  margin-left: 60px;
-  font-size: 14px;
 }
 
 .home-page-product{
@@ -151,8 +110,4 @@ margin: 0 auto;
   margin-left:15px;
   }
 
-  .product-card{
-    width: 70%;
-    margin: 0 auto;
-  }
 }
