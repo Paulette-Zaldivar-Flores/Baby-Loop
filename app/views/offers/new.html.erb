@@ -13,36 +13,36 @@
       <% end %>
     </div>
   </div>
-  <section>
-    <div class="row justify-content-center">
-      <% @offers&.each do |offer| %>
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm offers-rental-card">
-            <div class="row no-gutters p-3 ">
-              <div class="col-md-4">
-                <div class="bg-image">
-                  <% if offer&.photo&.key %>
-                    <%= cl_image_tag offer.photo.key, height: 200, width: 200 %>
-                  <% end %>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <ul class="mb-4 mb-md-0">
-                    <h5 class="card-title"><%= offer.item_name %></h5>
-                    <li class="margin-li">Category: <%= offer.category %></li>
-                    <li class="margin-li">Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
-                    <li class="margin-li">Description: <%= offer.description[0..45] %> </li>
-                    <li class="margin-li">Address: <%= offer.address %> </li>
-                  </ul>
-                  <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-                  <%= link_to "Edit", edit_offer_path(offer), class: "button-edit"  %>
-                </div>
+  <% @offers&.each do |offer| %>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-parent="#selector" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <h5 class="card-title"><%= offer.item_name %></h5>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body row">
+            <div class="col-sm-4 accordion-img">
+              <% if offer&.photo&.key %>
+                <%= cl_image_tag offer.photo.key%>
+              <% end %>
+            </div>
+            <div class="col-sm-4 col-sm-6 col-md-6">
+              <ul class="mb-4 mb-md-0">
+                <li class="margin-li">Category: <%= offer.category %></li>
+                <li class="margin-li">Price: <%= number_to_currency(offer.rate, { unit: "¥", precision: 0 }) %>/day </li>
+                <li class="margin-li">Description: <%= offer.description[0..45] %> </li>
+                <li class="margin-li">Address: <%= offer.address %> </li>
+              </ul>
+              <div class = "col accordion-btn">
+                <%= link_to "Delete", offer_path(offer), class: "button-decline ms-4", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+                <%= link_to "Edit", edit_offer_path(offer), class: "button-edit"  %>
               </div>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
-  </section>
+  <% end %>
 </div>
