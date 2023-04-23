@@ -47,6 +47,11 @@
   word-wrap: break-word;
 }
 
+.outgoing-requests{
+  box-shadow: rgba(163, 149, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+}
+
 .offer, .request{
   color: #6667AA;
   font-weight: bold;
@@ -58,9 +63,8 @@ width: 200px;
 }
 
 .lessors-card{
-background: #dfd0fc;
-width: 540px;
-margin: 0 auto;
+background: #efedf8;
+box-shadow: rgba(163, 149, 165, 0.2) 0px 8px 24px;
 }
 
 .lessors-card .card-text{

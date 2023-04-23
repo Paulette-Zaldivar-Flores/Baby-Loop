@@ -5,40 +5,35 @@
     <p>You haven't made any requests yet.</p>
   <% else %>
   </div>
-  <section>
-    <% @requests&.each do |request| %>
-      <div class="container py-3">
-        <div class="row d-flex mb-3 justify-content-center">
-          <div class="col-md-12 col-xl-10">
-            <div class="card shadow-0 rental-requests-card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                    <div
-                      class="bg-image hover-zoom ripple rounded ripple-surface"
-                    >
-                      <% if request.offer.photo.key.present? %>
-                        <%= cl_image_tag request.offer.photo.key, height: 200, width: 200 %>
-                      <% end %>
-                    </div>
-                  </div>
-                  <div
-                  class=" col-md-9">
-                    <ul class="text-truncate mb-4 mb-md-0">
-                      <h5><%= request.offer.item_name %></h5>
-                      <% if request.start_date %>
-                        <li class = "margin-li">Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: "¥", precision: 0 }) %></li>
-                        <li class = "margin-li">Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></li>
-                      <% end %>
-                      <li>Status: <%= request.status %></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  <% @requests&.each do |request| %>
+    <div class=" container-sm d-flex justify-content-center flex-column mt-4 p-4">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <% if request.offer.photo.key.present? %>
+              <%= cl_image_tag request.offer.photo.key, width: "300px", class: "img-fluid rounded-start" %>
+            <% end %>
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= request.offer.item_name %>
+              </h5>
+              <p class="card-text">
+                <% if request.start_date %>
+                  <div class = "margin-li">Total price: <%= number_to_currency(((request.end_date - request.start_date) / 86400) * request.offer.rate, { unit: "¥", precision: 0 }) %></div>
+                  <div class = "margin-li">Rental period: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></div>
+                <% end %>
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  Status: <%= request.status %>
+                </small>
+              </p>
             </div>
           </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
