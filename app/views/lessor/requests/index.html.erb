@@ -1,5 +1,5 @@
 <h1 class="text-center products-page-title mt-5">Incoming Requests</h1>
-<div class="container d-flex justify-content-center mt-4 p-4">
+<div class="container-fluid d-flex justify-content-center flex-wrap mt-4 p-4">
   <% @requests_per_offer.each do |offer, requests| %>
     <% unless requests.all? { |request| request.status == "rejected" } %>
     <% end %>
@@ -22,7 +22,7 @@
                   <p>Requested Dates: <%= request.start_date.strftime("%b %d, %Y") %> to <%= request.end_date.strftime("%b %d, %Y") %></p>
                   <p> Status:  <%= request.status %></p>
                   <% if request.status == "pending" %>
-                    <span class="d-flex">
+                    <span class="d-flex lessors-card-buttons">
                       <%= simple_form_for [:lessor, request] do |f| %>
                         <%= f.input :status, as: :hidden, input_html: { value: "accepted" } %>
                         <%= f.submit "Accept", class: "btn btn-info mx-3" %>
@@ -34,11 +34,11 @@
                     </span>
                   <% end %>
                 </div>
-              <% end %>
-            <% end %>
-          <% end %>
+              </div>
+            </div>
+          </div>
         <% end %>
-      </div>
-    </div>
-  </div>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>

@@ -76,6 +76,12 @@ box-shadow: rgba(163, 149, 165, 0.2) 0px 8px 24px;
   flex-wrap: wrap;
 }
 
+.outgoing-card{
+  background-color: #f7ffde;
+  border-radius: 3px;
+  box-shadow: rgba(163, 149, 165, 0.2) 0px 8px 24px;
+}
+
 
 @media only screen and (max-width: 767px) {
   .offers-rental-card {
@@ -114,4 +120,11 @@ box-shadow: rgba(163, 149, 165, 0.2) 0px 8px 24px;
   margin-left:15px;
   }
 
+  .outgoing-card, .lessors-card{
+    width: 15rem;
+  }
+
+  .lessors-card-buttons{
+    justify-content: center;
+  }
 }
