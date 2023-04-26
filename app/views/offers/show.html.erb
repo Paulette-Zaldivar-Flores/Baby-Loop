@@ -1,6 +1,6 @@
 <div class="container pt-4">
   <div class="col-md-6 text-center mx-auto">
-    <h2 class= "offers-title"><%= @offer.item_name %></h2>
+    <h1 class= "offers-title"><%= @offer.item_name %></h1>
     <% if @offer.photo.attached? %>
       <%= cl_image_tag @offer.photo.key, class: "img-fluid rounded shadow-sm", height: 350, width: 300 %>
     <% else %>
