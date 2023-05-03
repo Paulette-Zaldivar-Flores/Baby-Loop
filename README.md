@@ -64,7 +64,11 @@
 
 ## Screenshots
 
-<img width="1269" alt="Screen Shot 2566-03-28 at 09 13 54" src="https://user-images.githubusercontent.com/96970580/228553640-308ddd56-596d-4c1c-a61f-d390116a86a6.png">
+
+
+https://user-images.githubusercontent.com/96970580/235887421-55d700d9-e4aa-4c21-b797-790d6f6d60fd.mp4
+
+
 
 
 
