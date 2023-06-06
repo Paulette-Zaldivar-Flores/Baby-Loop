@@ -1,6 +1,6 @@
 # Baby Loop 👶🏼
 > An ecommerce app web that allows you to rent and rent out baby products by uploading your offers. 
-> Live demo [_here_](https://baby-loop.herokuapp.com/). Follow this [_link_](https://www.youtube.com/watch?v=ZDf4zoo2Ok8) for a live presentation of Baby Loop with the app user Marie.
+> Live demo [_here_](https://baby-loop.herokuapp.com/). 
 
 
 
