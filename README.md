@@ -87,7 +87,7 @@ https://user-images.githubusercontent.com/96970580/235887421-55d700d9-e4aa-4c21-
 
 To do:
 <ul>
-  <li>Make responsive</li><ul>
+  <li>Make responsive: in progress</li><ul>
 
 
 ## Contact
